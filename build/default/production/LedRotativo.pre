@@ -1,9 +1,6 @@
 
 # 1 "LedRotativo.c"
 
-# 7
-const int retraso = 1000;
-
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.43\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -2197,7 +2194,14 @@ extern int printf(const char *, ...);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 
-# 13 "LedRotativo.c"
+# 12 "LedRotativo.c"
+int boton1 = 0;
+int boton2 = 0;
+int boton3 = 0;
+int boton4 = 0;
+
+const int retraso = 1000;
+
 void main(void) {
 TRISB = 0;
 PORTB = 0;
@@ -2205,45 +2209,52 @@ TRISC = 1;
 PORTC = 0;
 
 while (1){
+
 if (PORTCbits.RC0 == 1){
-PORTB = 0b00000001;
+boton1++;
+}
+if (boton1 == 1){
+PORTB = 0B00000001;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00000010;
+PORTB = 0B00000010;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00000100;
+PORTB = 0B00000100;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00001000;
+PORTB = 0B00001000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00010000;
+PORTB = 0B00010000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00100000;
+PORTB = 0B00100000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b01000000;
+PORTB = 0B01000000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b10000000;
+PORTB = 0B10000000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
 }
 
+
 if (PORTCbits.RC1 == 1){
-PORTB = 0b10000001;
+PORTB = 0B10000001;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b01000010;
+PORTB = 0B01000010;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00100100;
+PORTB = 0B00100100;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00011000;
+PORTB = 0B00011000;
+_delay((unsigned long)((retraso)*(4000000/4000.0)));
 }
 
 if (PORTCbits.RC2 == 1){
-PORTB = 0b00011000;
+PORTB = 0B00011000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b00100100;
+PORTB = 0B00100100;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b01000010;
+PORTB = 0B01000010;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0b10000001;
+PORTB = 0B10000001;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
 }
+
 if (PORTCbits.RC3 == 1){
 PORTB = 0B10000000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
@@ -2260,6 +2271,8 @@ _delay((unsigned long)((retraso)*(4000000/4000.0)));
 PORTB = 0B11111110;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
 PORTB = 0B11111111;
+_delay((unsigned long)((retraso)*(4000000/4000.0)));
+PORTB = 0B00000000;
 _delay((unsigned long)((retraso)*(4000000/4000.0)));
 }
 

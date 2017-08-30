@@ -4,11 +4,17 @@
  *
  * Created on 24 de agosto de 2017, 09:11 AM
  */
-const int retraso = 1000;
 
 #include <xc.h>
 #include <stdio.h>
 #include "config.h"
+
+int boton1 = 0;
+int boton2 = 0; 
+int boton3 = 0; 
+int boton4 = 0;
+
+const int retraso = 1000;
 
 void main(void) {
     TRISB = 0;
@@ -17,46 +23,51 @@ void main(void) {
     PORTC = 0;
     
     while (1){
-        if (PORTCbits.RC0 == 1){
-            PORTB = 0b00000001;
+        //Secuencia 1
+        
+        if (PORTCbits.RC0 == 1){            
+            PORTB = 0B00000001;
             __delay_ms(retraso);
-            PORTB = 0b00000010;
+            PORTB = 0B00000010;
             __delay_ms(retraso);
-            PORTB = 0b00000100;
+            PORTB = 0B00000100;
             __delay_ms(retraso);
-            PORTB = 0b00001000;
+            PORTB = 0B00001000;
             __delay_ms(retraso);
-            PORTB = 0b00010000;
+            PORTB = 0B00010000;
             __delay_ms(retraso);
-            PORTB = 0b00100000;
+            PORTB = 0B00100000;
             __delay_ms(retraso);
-            PORTB = 0b01000000;
+            PORTB = 0B01000000;
             __delay_ms(retraso);
-            PORTB = 0b10000000;
+            PORTB = 0B10000000;
             __delay_ms(retraso);
         }
         
+        //Secuencia 2
         if (PORTCbits.RC1 == 1){
-            PORTB = 0b10000001;
+            PORTB = 0B10000001;
             __delay_ms(retraso);
-            PORTB = 0b01000010;
+            PORTB = 0B01000010;
             __delay_ms(retraso);
-            PORTB = 0b00100100;
+            PORTB = 0B00100100;
             __delay_ms(retraso);
-            PORTB = 0b00011000;
+            PORTB = 0B00011000;
+            __delay_ms(retraso);
         }
-        
-        if (PORTCbits.RC2 == 1){
-            PORTB = 0b00011000;    
+        //Secuencia 3
+        if (PORTCbits.RC2 == 1){            
+            PORTB = 0B00011000;    
             __delay_ms(retraso);    
-            PORTB = 0b00100100;
+            PORTB = 0B00100100;
             __delay_ms(retraso);
-            PORTB = 0b01000010;
+            PORTB = 0B01000010;
             __delay_ms(retraso);
-            PORTB = 0b10000001;
+            PORTB = 0B10000001;
             __delay_ms(retraso);
         }
-        if (PORTCbits.RC3 == 1){
+        //Secuencia 4
+        if (PORTCbits.RC3 == 1){            
             PORTB = 0B10000000;
             __delay_ms(retraso);
             PORTB = 0B11000000;
@@ -72,6 +83,8 @@ void main(void) {
             PORTB = 0B11111110;
             __delay_ms(retraso);
             PORTB = 0B11111111;
+            __delay_ms(retraso);
+            PORTB = 0B00000000;
             __delay_ms(retraso);
         }
         
