@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.43\dat\en_msgs.txt -cs \
   -h+dist/default/production\LedRotativo.production.sym \
   --cmf=dist/default/production\LedRotativo.production.cmf -z -Q16F887 \
-  -oC:\Users\sebas\AppData\Local\Temp\s7bg.2 \
+  -oC:\Users\sebas\AppData\Local\Temp\s75s.2 \
   -Mdist/default/production/LedRotativo.production.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\sebas\AppData\Local\Temp\s7bg.obj \
+  -DENTRY=2 -k C:\Users\sebas\AppData\Local\Temp\s75s.obj \
   dist/default/production\LedRotativo.production.obj 
 
 Object code version is 3.11
@@ -28,16 +28,16 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\sebas\AppData\Local\Temp\s7bg.obj
+C:\Users\sebas\AppData\Local\Temp\s75s.obj
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2     400E       0
 dist/default/production\LedRotativo.production.obj
                 cinit                               7F2      7F2        E      FE4       0
-                text4                               F94      F94       6C     1F28       0
-                text3                               F73      F73       21     1EE6       0
-                text2                                A7       A7       D3      14E       0
-                text1                                19       19       8E       32       0
-                maintext                            17A      17A      678      2F4       0
+                text4                                22       22       6C       44       0
+                text3                               F51      F51       21     1EA2       0
+                text2                                8E       8E       D3      11C       0
+                text1                               F72      F72       8E     1EE4       0
+                maintext                            161      161      691      2C2       0
                 cstackBANK0                          20       20       22       20       1
                 cstackCOMMON                         70       70        E       70       1
                 bssBANK0                             42       42        8       20       1
@@ -49,11 +49,11 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7F2      7F2        E         0
-                text4                               F94      F94       6C         0
-                text3                               F73      F73       21         0
-                text2                                A7       A7       D3         0
-                text1                                19       19       8E         0
-                maintext                            17A      17A      678         0
+                text4                                22       22       6C         0
+                text3                               F51      F51       21         0
+                text2                                8E       8E       D3         0
+                text1                               F72      F72       8E         0
+                maintext                            161      161      691         0
 
         CLASS   STRCODE        
 
@@ -104,13 +104,13 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 strings                        000003  000008  00000B         6       0  STRING      2
                 cstackBANK0                    000020  00002A  00004A        20       1  BANK0       1
-                text1                          000019  00008E  0000A7        32       0  CODE        2
+                text4                          000022  00006C  00008E        44       0  CODE        2
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                text2                          0000A7  0000D3  00017A       14E       0  CODE        2
-                maintext                       00017A  000678  0007F2       2F4       0  CODE        2
+                text2                          00008E  0000D3  000161       11C       0  CODE        2
+                maintext                       000161  000691  0007F2       2C2       0  CODE        2
                 cinit                          0007F2  00000E  000800       FE4       0  CODE        2
-                text3                          000F73  000021  000F94      1EE6       0  CODE        2
-                text4                          000F94  00006C  001000      1F28       0  CODE        2
+                text3                          000F51  000021  000F72      1EA2       0  CODE        2
+                text1                          000F72  00008E  001000      1EE4       0  CODE        2
                 config                         002007  000002  002009      400E       0  CONFIG      2
 
 
@@ -121,15 +121,15 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             000B-0018              E           2
-                         0800-0F72            773
+        CODE             000B-0021             17           2
+                         0800-0F50            751
                          1000-1FFF            800
-        CONST            000B-0018              E           2
-                         0800-0F72            100
+        CONST            000B-0021             17           2
+                         0800-0F50            100
                          1000-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            000B-0018              E           2
-                         0800-0F72            100
+        ENTRY            000B-0021             17           2
+                         0800-0F50            100
                          1000-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              004A-006F             26           1
@@ -141,11 +141,11 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          000B-0018              E           2
-                         0800-0F72            773
+        STRCODE          000B-0021             17           2
+                         0800-0F50            751
                          1000-1FFF           1000
-        STRING           000B-0018              E           2
-                         0800-0F72            100
+        STRING           000B-0021             17           2
+                         0800-0F50            100
                          1000-1FFF            100
 
                                   Symbol Table
@@ -243,21 +243,21 @@ __S0                      (abs)        2009
 __S1                      (abs)        007E
 __S2                      (abs)        0000
 __S3                      (abs)        0000
-___awtoft                 text3        0F73
+___awtoft                 text3        0F51
 ___awtoft@c               cstackCOMMON 0078
 ___awtoft@sign            cstackCOMMON 007D
-___ftmul                  text2        00A7
+___ftmul                  text2        008E
 ___ftmul@cntr             cstackBANK0  002E
 ___ftmul@exp              cstackBANK0  002A
 ___ftmul@f1               cstackBANK0  0020
 ___ftmul@f2               cstackBANK0  0023
 ___ftmul@f3_as_product    cstackBANK0  002B
 ___ftmul@sign             cstackBANK0  002F
-___ftpack                 text4        0F94
+___ftpack                 text4        0022
 ___ftpack@arg             cstackCOMMON 0070
 ___ftpack@exp             cstackCOMMON 0073
 ___ftpack@sign            cstackCOMMON 0074
-___fttol                  text1        0019
+___fttol                  text1        0F72
 ___fttol@exp1             cstackBANK0  003D
 ___fttol@f1               cstackBANK0  0030
 ___fttol@lval             cstackBANK0  0039
@@ -265,10 +265,10 @@ ___fttol@sign1            cstackBANK0  0038
 ___int_sp                 stack        0000
 ___latbits                (abs)        0002
 ___sp                     stack        0000
-__end_of___awtoft         text3        0F94
-__end_of___ftmul          text2        017A
-__end_of___ftpack         text4        1000
-__end_of___fttol          text1        00A7
+__end_of___awtoft         text3        0F72
+__end_of___ftmul          text2        0161
+__end_of___ftpack         text4        008E
+__end_of___fttol          text1        1000
 __end_of__initialization  cinit        07FC
 __end_of__stringtab       strings      0009
 __end_of_main             maintext     07F2
@@ -277,12 +277,12 @@ __initialization          cinit        07F2
 __pbssBANK0               bssBANK0     0042
 __pcstackBANK0            cstackBANK0  0020
 __pcstackCOMMON           cstackCOMMON 0070
-__pmaintext               maintext     017A
+__pmaintext               maintext     0161
 __pstrings                strings      0003
-__ptext1                  text1        0019
-__ptext2                  text2        00A7
-__ptext3                  text3        0F73
-__ptext4                  text4        0F94
+__ptext1                  text1        0F72
+__ptext2                  text2        008E
+__ptext3                  text3        0F51
+__ptext4                  text4        0022
 __size_of___awtoft        (abs)        0000
 __size_of___ftmul         (abs)        0000
 __size_of___ftpack        (abs)        0000
@@ -291,7 +291,10 @@ __size_of_main            (abs)        0000
 __stringbase              strings      0008
 __stringtab               strings      0003
 _boton1                   bssBANK0     0048
-_main                     maintext     017A
+_boton2                   bssBANK0     0046
+_boton3                   bssBANK0     0044
+_boton4                   bssBANK0     0042
+_main                     maintext     0161
 _retraso                  strings      0009
 btemp                     (abs)        007E
 end_of_initialization     cinit        07FC
@@ -313,7 +316,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 19 in file "LedRotativo.c"
+		line 18 in file "LedRotativo.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -474,22 +477,22 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftmul.c
-		___ftmul       		CODE           	00A7	0000	212
+		___ftmul       		CODE           	008E	0000	212
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftmul.c estimated size: 212
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awtoft.c
-		___awtoft      		CODE           	0F73	0000	34
+		___awtoft      		CODE           	0F51	0000	34
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awtoft.c estimated size: 34
 
 LedRotativo.c
-		_main          		CODE           	017A	0000	1657
+		_main          		CODE           	0161	0000	1682
 
-LedRotativo.c estimated size: 1657
+LedRotativo.c estimated size: 1682
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\fttol.c
-		___fttol       		CODE           	0019	0000	143
+		___fttol       		CODE           	0F72	0000	143
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\fttol.c estimated size: 143
 
@@ -501,7 +504,7 @@ shared
 shared estimated size: 21
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
-		___ftpack      		CODE           	0F94	0000	109
+		___ftpack      		CODE           	0022	0000	109
 
 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c estimated size: 109
 

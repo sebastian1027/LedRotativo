@@ -13,7 +13,6 @@ int boton1 = 0;
 int boton2 = 0; 
 int boton3 = 0; 
 int boton4 = 0;
-
 const int retraso = 1000;
 
 void main(void) {
@@ -26,6 +25,8 @@ void main(void) {
         //Secuencia 1
         
         if (PORTCbits.RC0 == 1){            
+            boton1 = 1;
+            while  (boton1 == 1){               
             PORTB = 0B00000001;
             __delay_ms(retraso);
             PORTB = 0B00000010;
@@ -42,10 +43,14 @@ void main(void) {
             __delay_ms(retraso);
             PORTB = 0B10000000;
             __delay_ms(retraso);
+            }
         }
+        
         
         //Secuencia 2
         if (PORTCbits.RC1 == 1){
+            boton2 = 1;
+            while (boton2 == 1){
             PORTB = 0B10000001;
             __delay_ms(retraso);
             PORTB = 0B01000010;
@@ -54,9 +59,12 @@ void main(void) {
             __delay_ms(retraso);
             PORTB = 0B00011000;
             __delay_ms(retraso);
+         }
         }
         //Secuencia 3
         if (PORTCbits.RC2 == 1){            
+            boton3 = 1;
+            while (boton3 ==1 ){
             PORTB = 0B00011000;    
             __delay_ms(retraso);    
             PORTB = 0B00100100;
@@ -65,9 +73,12 @@ void main(void) {
             __delay_ms(retraso);
             PORTB = 0B10000001;
             __delay_ms(retraso);
+           }
         }
         //Secuencia 4
-        if (PORTCbits.RC3 == 1){            
+        if (PORTCbits.RC3 == 1){  
+            boton4 = 1; 
+           while (boton4 == 1 ) {
             PORTB = 0B10000000;
             __delay_ms(retraso);
             PORTB = 0B11000000;
@@ -86,10 +97,9 @@ void main(void) {
             __delay_ms(retraso);
             PORTB = 0B00000000;
             __delay_ms(retraso);
-        }
-        
-    }
-    
+            }           
+        }        
+    }    
 }
 
 
