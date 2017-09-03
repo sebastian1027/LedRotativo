@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\LedRotativo.production.hex">
+  <executable name="dist/default/debug\LedRotativo.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
-      <used>854</used>
-      <free>7338</free>
+      <used>521</used>
+      <free>7671</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>368</length>
-      <used>19</used>
-      <free>349</free>
+      <used>13</used>
+      <free>355</free>
     </memory>
   </executable>
 </project>

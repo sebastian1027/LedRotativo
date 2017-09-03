@@ -1,0 +1,1229 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.43 build -156212558 
+                                                                                               Fri Sep 01 11:54:44 2017
+
+Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
+     1                           	processor	16F887
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	text3,local,class=CODE,merge=1,delta=2
+    11                           	psect	text4,local,class=CODE,merge=1,delta=2
+    12                           	dabs	1,0x7E,2
+    13  0000                     
+    14                           ; Version 1.43
+    15                           ; Generated 25/07/2017 GMT
+    16                           ; 
+    17                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC16F887 Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48  0000                     	;# 
+    49  0001                     	;# 
+    50  0002                     	;# 
+    51  0003                     	;# 
+    52  0004                     	;# 
+    53  0005                     	;# 
+    54  0006                     	;# 
+    55  0007                     	;# 
+    56  0008                     	;# 
+    57  0009                     	;# 
+    58  000A                     	;# 
+    59  000B                     	;# 
+    60  000C                     	;# 
+    61  000D                     	;# 
+    62  000E                     	;# 
+    63  000E                     	;# 
+    64  000F                     	;# 
+    65  0010                     	;# 
+    66  0011                     	;# 
+    67  0012                     	;# 
+    68  0013                     	;# 
+    69  0014                     	;# 
+    70  0015                     	;# 
+    71  0015                     	;# 
+    72  0016                     	;# 
+    73  0017                     	;# 
+    74  0018                     	;# 
+    75  0019                     	;# 
+    76  001A                     	;# 
+    77  001B                     	;# 
+    78  001B                     	;# 
+    79  001C                     	;# 
+    80  001D                     	;# 
+    81  001E                     	;# 
+    82  001F                     	;# 
+    83  0081                     	;# 
+    84  0085                     	;# 
+    85  0086                     	;# 
+    86  0087                     	;# 
+    87  0088                     	;# 
+    88  0089                     	;# 
+    89  008C                     	;# 
+    90  008D                     	;# 
+    91  008E                     	;# 
+    92  008F                     	;# 
+    93  0090                     	;# 
+    94  0091                     	;# 
+    95  0092                     	;# 
+    96  0093                     	;# 
+    97  0093                     	;# 
+    98  0093                     	;# 
+    99  0094                     	;# 
+   100  0095                     	;# 
+   101  0096                     	;# 
+   102  0097                     	;# 
+   103  0098                     	;# 
+   104  0099                     	;# 
+   105  009A                     	;# 
+   106  009B                     	;# 
+   107  009C                     	;# 
+   108  009D                     	;# 
+   109  009E                     	;# 
+   110  009F                     	;# 
+   111  0105                     	;# 
+   112  0107                     	;# 
+   113  0108                     	;# 
+   114  0109                     	;# 
+   115  010C                     	;# 
+   116  010C                     	;# 
+   117  010D                     	;# 
+   118  010E                     	;# 
+   119  010F                     	;# 
+   120  0185                     	;# 
+   121  0187                     	;# 
+   122  0188                     	;# 
+   123  0189                     	;# 
+   124  018C                     	;# 
+   125  018D                     	;# 
+   126  0007                     _PORTCbits	set	7
+   127  0007                     _PORTC	set	7
+   128  0006                     _PORTB	set	6
+   129  0018                     _RCSTAbits	set	24
+   130  0019                     _TXREG	set	25
+   131  000C                     _PIR1bits	set	12
+   132  0087                     _TRISC	set	135
+   133  0086                     _TRISB	set	134
+   134  0098                     _TXSTAbits	set	152
+   135                           
+   136                           	psect	cinit
+   137  07F4                     start_initialization:	
+   138                           ; #config settings
+   139                           
+   140  07F4                     __initialization:	
+   141                           
+   142                           ; Clear objects allocated to COMMON
+   143  07F4  01F0               	clrf	__pbssCOMMON& (0+127)
+   144  07F5  01F1               	clrf	(__pbssCOMMON+1)& (0+127)
+   145  07F6  01F2               	clrf	(__pbssCOMMON+2)& (0+127)
+   146  07F7  01F3               	clrf	(__pbssCOMMON+3)& (0+127)
+   147  07F8  01F4               	clrf	(__pbssCOMMON+4)& (0+127)
+   148  07F9  01F5               	clrf	(__pbssCOMMON+5)& (0+127)
+   149  07FA  01F6               	clrf	(__pbssCOMMON+6)& (0+127)
+   150  07FB  01F7               	clrf	(__pbssCOMMON+7)& (0+127)
+   151  07FC                     end_of_initialization:	
+   152                           ;End of C runtime variable initialization code
+   153                           
+   154  07FC                     __end_of__initialization:	
+   155  07FC  0183               	clrf	3
+   156  07FD  120A  118A  2E81   	ljmp	_main	;jump to C main() function
+   157                           
+   158                           	psect	bssCOMMON
+   159  0070                     __pbssCOMMON:	
+   160  0070                     _boton4:	
+   161  0070                     	ds	2
+   162  0072                     _boton3:	
+   163  0072                     	ds	2
+   164  0074                     _boton2:	
+   165  0074                     	ds	2
+   166  0076                     _boton1:	
+   167  0076                     	ds	2
+   168                           
+   169                           	psect	cstackCOMMON
+   170  0078                     __pcstackCOMMON:	
+   171  0078                     ?_Secuencia1:	
+   172  0078                     ??_Secuencia1:	
+   173                           ; 1 bytes @ 0x0
+   174                           
+   175  0078                     ?_Secuencia2:	
+   176                           ; 1 bytes @ 0x0
+   177                           
+   178  0078                     ??_Secuencia2:	
+   179                           ; 1 bytes @ 0x0
+   180                           
+   181  0078                     ?_Secuencia3:	
+   182                           ; 1 bytes @ 0x0
+   183                           
+   184  0078                     ??_Secuencia3:	
+   185                           ; 1 bytes @ 0x0
+   186                           
+   187  0078                     ?_Secuencia4:	
+   188                           ; 1 bytes @ 0x0
+   189                           
+   190  0078                     ??_Secuencia4:	
+   191                           ; 1 bytes @ 0x0
+   192                           
+   193  0078                     ?_main:	
+   194                           ; 1 bytes @ 0x0
+   195                           
+   196                           
+   197                           ; 1 bytes @ 0x0
+   198  0078                     	ds	3
+   199  007B                     ??_main:	
+   200                           
+   201                           	psect	maintext
+   202  0681                     __pmaintext:	
+   203                           ; 1 bytes @ 0x3
+   204 ;;
+   205 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   206 ;;
+   207 ;; *************** function _main *****************
+   208 ;; Defined at:
+   209 ;;		line 27 in file "LedRotativo.c"
+   210 ;; Parameters:    Size  Location     Type
+   211 ;;		None
+   212 ;; Auto vars:     Size  Location     Type
+   213 ;;		None
+   214 ;; Return value:  Size  Location     Type
+   215 ;;                  1    wreg      void 
+   216 ;; Registers used:
+   217 ;;		wreg, status,2, status,0, pclath, cstack
+   218 ;; Tracked objects:
+   219 ;;		On entry : B00/0
+   220 ;;		On exit  : 0/0
+   221 ;;		Unchanged: 0/0
+   222 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   223 ;;      Params:         0       0       0       0       0
+   224 ;;      Locals:         0       0       0       0       0
+   225 ;;      Temps:          0       0       0       0       0
+   226 ;;      Totals:         0       0       0       0       0
+   227 ;;Total ram usage:        0 bytes
+   228 ;; Hardware stack levels required when called:    1
+   229 ;; This function calls:
+   230 ;;		_Secuencia1
+   231 ;;		_Secuencia2
+   232 ;;		_Secuencia3
+   233 ;;		_Secuencia4
+   234 ;; This function is called by:
+   235 ;;		Startup code after reset
+   236 ;; This function uses a non-reentrant model
+   237 ;;
+   238                           
+   239                           
+   240                           ;psect for function _main
+   241  0681                     _main:	
+   242                           
+   243                           ;LedRotativo.c: 28: TRISB = 0;
+   244                           
+   245                           ;incstack = 0
+   246                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   247  0681  1683               	bsf	3,5	;RP0=1, select bank1
+   248  0682  1303               	bcf	3,6	;RP1=0, select bank1
+   249  0683  0186               	clrf	6	;volatile
+   250                           
+   251                           ;LedRotativo.c: 29: PORTB = 0;
+   252  0684  1283               	bcf	3,5	;RP0=0, select bank0
+   253  0685  1303               	bcf	3,6	;RP1=0, select bank0
+   254  0686  0186               	clrf	6	;volatile
+   255                           
+   256                           ;LedRotativo.c: 30: TRISC = 0b11111111;
+   257  0687  30FF               	movlw	255
+   258  0688  1683               	bsf	3,5	;RP0=1, select bank1
+   259  0689  1303               	bcf	3,6	;RP1=0, select bank1
+   260  068A  0087               	movwf	7	;volatile
+   261                           
+   262                           ;LedRotativo.c: 31: PORTC = 0;
+   263  068B  1283               	bcf	3,5	;RP0=0, select bank0
+   264  068C  1303               	bcf	3,6	;RP1=0, select bank0
+   265  068D  0187               	clrf	7	;volatile
+   266  068E                     l557:	
+   267                           ;LedRotativo.c: 34: while (1){
+   268                           
+   269                           
+   270                           ;LedRotativo.c: 35: Secuencia1();
+   271  068E  120A  118A  26D2  120A  118A  	fcall	_Secuencia1
+   272                           
+   273                           ;LedRotativo.c: 36: if (PORTCbits.RC0 == 1){
+   274  0693  1283               	bcf	3,5	;RP0=0, select bank0
+   275  0694  1303               	bcf	3,6	;RP1=0, select bank0
+   276  0695  1C07               	btfss	7,0	;volatile
+   277  0696  2E9B               	goto	l563
+   278                           
+   279                           ;LedRotativo.c: 37: boton1 = 1;
+   280  0697  3001               	movlw	1
+   281  0698  00F6               	movwf	_boton1
+   282  0699  3000               	movlw	0
+   283  069A  00F7               	movwf	_boton1+1
+   284  069B                     l563:	
+   285                           
+   286                           ;LedRotativo.c: 39: }
+   287                           ;LedRotativo.c: 40: if (PORTCbits.RC1 == 1){
+   288  069B  1C87               	btfss	7,1	;volatile
+   289  069C  2EA1               	goto	l567
+   290                           
+   291                           ;LedRotativo.c: 41: boton2 = 1;
+   292  069D  3001               	movlw	1
+   293  069E  00F4               	movwf	_boton2
+   294  069F  3000               	movlw	0
+   295  06A0  00F5               	movwf	_boton2+1
+   296  06A1                     l567:	
+   297                           
+   298                           ;LedRotativo.c: 43: }
+   299                           ;LedRotativo.c: 44: if (PORTCbits.RC2 == 1){
+   300  06A1  1D07               	btfss	7,2	;volatile
+   301  06A2  2EA7               	goto	l571
+   302                           
+   303                           ;LedRotativo.c: 45: boton3 = 1;
+   304  06A3  3001               	movlw	1
+   305  06A4  00F2               	movwf	_boton3
+   306  06A5  3000               	movlw	0
+   307  06A6  00F3               	movwf	_boton3+1
+   308  06A7                     l571:	
+   309                           
+   310                           ;LedRotativo.c: 47: }
+   311                           ;LedRotativo.c: 48: if (PORTCbits.RC3 == 1){
+   312  06A7  1D87               	btfss	7,3	;volatile
+   313  06A8  2EAD               	goto	l575
+   314                           
+   315                           ;LedRotativo.c: 49: boton4 = 1;
+   316  06A9  3001               	movlw	1
+   317  06AA  00F0               	movwf	_boton4
+   318  06AB  3000               	movlw	0
+   319  06AC  00F1               	movwf	_boton4+1
+   320  06AD                     l575:	
+   321                           
+   322                           ;LedRotativo.c: 51: }
+   323                           ;LedRotativo.c: 53: if (boton1 == 1){
+   324  06AD  0376               	decf	_boton1,w
+   325  06AE  0477               	iorwf	_boton1+1,w
+   326  06AF  1D03               	btfss	3,2
+   327  06B0  2EB6               	goto	l579
+   328                           
+   329                           ;LedRotativo.c: 54: Secuencia1();
+   330  06B1  120A  118A  26D2  120A  118A  	fcall	_Secuencia1
+   331  06B6                     l579:	
+   332                           
+   333                           ;LedRotativo.c: 55: }
+   334                           ;LedRotativo.c: 56: if (boton2 == 1){
+   335  06B6  0374               	decf	_boton2,w
+   336  06B7  0475               	iorwf	_boton2+1,w
+   337  06B8  1D03               	btfss	3,2
+   338  06B9  2EBF               	goto	l583
+   339                           
+   340                           ;LedRotativo.c: 57: Secuencia2();
+   341  06BA  120A  118A  25F7  120A  118A  	fcall	_Secuencia2
+   342  06BF                     l583:	
+   343                           
+   344                           ;LedRotativo.c: 58: }
+   345                           ;LedRotativo.c: 61: if (boton3 == 1 ){
+   346  06BF  0372               	decf	_boton3,w
+   347  06C0  0473               	iorwf	_boton3+1,w
+   348  06C1  1D03               	btfss	3,2
+   349  06C2  2EC8               	goto	l587
+   350                           
+   351                           ;LedRotativo.c: 62: Secuencia3();
+   352  06C3  120A  118A  263C  120A  118A  	fcall	_Secuencia3
+   353  06C8                     l587:	
+   354                           
+   355                           ;LedRotativo.c: 63: }
+   356                           ;LedRotativo.c: 65: if (boton4 == 1){
+   357  06C8  0370               	decf	_boton4,w
+   358  06C9  0471               	iorwf	_boton4+1,w
+   359  06CA  1D03               	btfss	3,2
+   360  06CB  2E8E               	goto	l557
+   361                           
+   362                           ;LedRotativo.c: 66: Secuencia4();
+   363  06CC  120A  118A  275B  120A  118A  	fcall	_Secuencia4
+   364  06D1  2E8E               	goto	l557
+   365  06D2                     __end_of_main:	
+   366                           
+   367                           	psect	text1
+   368  075B                     __ptext1:	
+   369 ;; *************** function _Secuencia4 *****************
+   370 ;; Defined at:
+   371 ;;		line 116 in file "LedRotativo.c"
+   372 ;; Parameters:    Size  Location     Type
+   373 ;;		None
+   374 ;; Auto vars:     Size  Location     Type
+   375 ;;		None
+   376 ;; Return value:  Size  Location     Type
+   377 ;;                  1    wreg      void 
+   378 ;; Registers used:
+   379 ;;		wreg, status,2
+   380 ;; Tracked objects:
+   381 ;;		On entry : 0/0
+   382 ;;		On exit  : 0/0
+   383 ;;		Unchanged: 0/0
+   384 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   385 ;;      Params:         0       0       0       0       0
+   386 ;;      Locals:         0       0       0       0       0
+   387 ;;      Temps:          3       0       0       0       0
+   388 ;;      Totals:         3       0       0       0       0
+   389 ;;Total ram usage:        3 bytes
+   390 ;; Hardware stack levels used:    1
+   391 ;; This function calls:
+   392 ;;		Nothing
+   393 ;; This function is called by:
+   394 ;;		_main
+   395 ;; This function uses a non-reentrant model
+   396 ;;
+   397                           
+   398                           
+   399                           ;psect for function _Secuencia4
+   400  075B                     _Secuencia4:	
+   401                           
+   402                           ;LedRotativo.c: 117: PORTB = 0B10000000;
+   403                           
+   404                           ;incstack = 0
+   405                           ; Regs used in _Secuencia4: [wreg+status,2]
+   406  075B  3080               	movlw	128
+   407  075C  1283               	bcf	3,5	;RP0=0, select bank0
+   408  075D  1303               	bcf	3,6	;RP1=0, select bank0
+   409  075E  0086               	movwf	6	;volatile
+   410                           
+   411                           ;LedRotativo.c: 118: _delay((unsigned long)((500)*(4000000/4000.0)));
+   412  075F  3003               	movlw	3
+   413  0760  00FA               	movwf	??_Secuencia4+2
+   414  0761  308A               	movlw	138
+   415  0762  00F9               	movwf	??_Secuencia4+1
+   416  0763  3055               	movlw	85
+   417  0764  00F8               	movwf	??_Secuencia4
+   418  0765                     u107:	
+   419  0765  0BF8               	decfsz	??_Secuencia4,f
+   420  0766  2F65               	goto	u107
+   421  0767  0BF9               	decfsz	??_Secuencia4+1,f
+   422  0768  2F65               	goto	u107
+   423  0769  0BFA               	decfsz	??_Secuencia4+2,f
+   424  076A  2F65               	goto	u107
+   425  076B  2F6C               	nop2
+   426                           
+   427                           ;LedRotativo.c: 119: PORTB = 0B11000000;
+   428  076C  30C0               	movlw	192
+   429  076D  1283               	bcf	3,5	;RP0=0, select bank0
+   430  076E  1303               	bcf	3,6	;RP1=0, select bank0
+   431  076F  0086               	movwf	6	;volatile
+   432                           
+   433                           ;LedRotativo.c: 120: _delay((unsigned long)((500)*(4000000/4000.0)));
+   434  0770  3003               	movlw	3
+   435  0771  00FA               	movwf	??_Secuencia4+2
+   436  0772  308A               	movlw	138
+   437  0773  00F9               	movwf	??_Secuencia4+1
+   438  0774  3055               	movlw	85
+   439  0775  00F8               	movwf	??_Secuencia4
+   440  0776                     u117:	
+   441  0776  0BF8               	decfsz	??_Secuencia4,f
+   442  0777  2F76               	goto	u117
+   443  0778  0BF9               	decfsz	??_Secuencia4+1,f
+   444  0779  2F76               	goto	u117
+   445  077A  0BFA               	decfsz	??_Secuencia4+2,f
+   446  077B  2F76               	goto	u117
+   447  077C  2F7D               	nop2
+   448                           
+   449                           ;LedRotativo.c: 121: PORTB = 0B11100000;
+   450  077D  30E0               	movlw	224
+   451  077E  1283               	bcf	3,5	;RP0=0, select bank0
+   452  077F  1303               	bcf	3,6	;RP1=0, select bank0
+   453  0780  0086               	movwf	6	;volatile
+   454                           
+   455                           ;LedRotativo.c: 122: _delay((unsigned long)((500)*(4000000/4000.0)));
+   456  0781  3003               	movlw	3
+   457  0782  00FA               	movwf	??_Secuencia4+2
+   458  0783  308A               	movlw	138
+   459  0784  00F9               	movwf	??_Secuencia4+1
+   460  0785  3055               	movlw	85
+   461  0786  00F8               	movwf	??_Secuencia4
+   462  0787                     u127:	
+   463  0787  0BF8               	decfsz	??_Secuencia4,f
+   464  0788  2F87               	goto	u127
+   465  0789  0BF9               	decfsz	??_Secuencia4+1,f
+   466  078A  2F87               	goto	u127
+   467  078B  0BFA               	decfsz	??_Secuencia4+2,f
+   468  078C  2F87               	goto	u127
+   469  078D  2F8E               	nop2
+   470                           
+   471                           ;LedRotativo.c: 123: PORTB = 0B11110000;
+   472  078E  30F0               	movlw	240
+   473  078F  1283               	bcf	3,5	;RP0=0, select bank0
+   474  0790  1303               	bcf	3,6	;RP1=0, select bank0
+   475  0791  0086               	movwf	6	;volatile
+   476                           
+   477                           ;LedRotativo.c: 124: _delay((unsigned long)((500)*(4000000/4000.0)));
+   478  0792  3003               	movlw	3
+   479  0793  00FA               	movwf	??_Secuencia4+2
+   480  0794  308A               	movlw	138
+   481  0795  00F9               	movwf	??_Secuencia4+1
+   482  0796  3055               	movlw	85
+   483  0797  00F8               	movwf	??_Secuencia4
+   484  0798                     u137:	
+   485  0798  0BF8               	decfsz	??_Secuencia4,f
+   486  0799  2F98               	goto	u137
+   487  079A  0BF9               	decfsz	??_Secuencia4+1,f
+   488  079B  2F98               	goto	u137
+   489  079C  0BFA               	decfsz	??_Secuencia4+2,f
+   490  079D  2F98               	goto	u137
+   491  079E  2F9F               	nop2
+   492                           
+   493                           ;LedRotativo.c: 125: PORTB = 0B11111000;
+   494  079F  30F8               	movlw	248
+   495  07A0  1283               	bcf	3,5	;RP0=0, select bank0
+   496  07A1  1303               	bcf	3,6	;RP1=0, select bank0
+   497  07A2  0086               	movwf	6	;volatile
+   498                           
+   499                           ;LedRotativo.c: 126: _delay((unsigned long)((500)*(4000000/4000.0)));
+   500  07A3  3003               	movlw	3
+   501  07A4  00FA               	movwf	??_Secuencia4+2
+   502  07A5  308A               	movlw	138
+   503  07A6  00F9               	movwf	??_Secuencia4+1
+   504  07A7  3055               	movlw	85
+   505  07A8  00F8               	movwf	??_Secuencia4
+   506  07A9                     u147:	
+   507  07A9  0BF8               	decfsz	??_Secuencia4,f
+   508  07AA  2FA9               	goto	u147
+   509  07AB  0BF9               	decfsz	??_Secuencia4+1,f
+   510  07AC  2FA9               	goto	u147
+   511  07AD  0BFA               	decfsz	??_Secuencia4+2,f
+   512  07AE  2FA9               	goto	u147
+   513  07AF  2FB0               	nop2
+   514                           
+   515                           ;LedRotativo.c: 127: PORTB = 0B11111100;
+   516  07B0  30FC               	movlw	252
+   517  07B1  1283               	bcf	3,5	;RP0=0, select bank0
+   518  07B2  1303               	bcf	3,6	;RP1=0, select bank0
+   519  07B3  0086               	movwf	6	;volatile
+   520                           
+   521                           ;LedRotativo.c: 128: _delay((unsigned long)((500)*(4000000/4000.0)));
+   522  07B4  3003               	movlw	3
+   523  07B5  00FA               	movwf	??_Secuencia4+2
+   524  07B6  308A               	movlw	138
+   525  07B7  00F9               	movwf	??_Secuencia4+1
+   526  07B8  3055               	movlw	85
+   527  07B9  00F8               	movwf	??_Secuencia4
+   528  07BA                     u157:	
+   529  07BA  0BF8               	decfsz	??_Secuencia4,f
+   530  07BB  2FBA               	goto	u157
+   531  07BC  0BF9               	decfsz	??_Secuencia4+1,f
+   532  07BD  2FBA               	goto	u157
+   533  07BE  0BFA               	decfsz	??_Secuencia4+2,f
+   534  07BF  2FBA               	goto	u157
+   535  07C0  2FC1               	nop2
+   536                           
+   537                           ;LedRotativo.c: 129: PORTB = 0B11111110;
+   538  07C1  30FE               	movlw	254
+   539  07C2  1283               	bcf	3,5	;RP0=0, select bank0
+   540  07C3  1303               	bcf	3,6	;RP1=0, select bank0
+   541  07C4  0086               	movwf	6	;volatile
+   542                           
+   543                           ;LedRotativo.c: 130: _delay((unsigned long)((500)*(4000000/4000.0)));
+   544  07C5  3003               	movlw	3
+   545  07C6  00FA               	movwf	??_Secuencia4+2
+   546  07C7  308A               	movlw	138
+   547  07C8  00F9               	movwf	??_Secuencia4+1
+   548  07C9  3055               	movlw	85
+   549  07CA  00F8               	movwf	??_Secuencia4
+   550  07CB                     u167:	
+   551  07CB  0BF8               	decfsz	??_Secuencia4,f
+   552  07CC  2FCB               	goto	u167
+   553  07CD  0BF9               	decfsz	??_Secuencia4+1,f
+   554  07CE  2FCB               	goto	u167
+   555  07CF  0BFA               	decfsz	??_Secuencia4+2,f
+   556  07D0  2FCB               	goto	u167
+   557  07D1  2FD2               	nop2
+   558                           
+   559                           ;LedRotativo.c: 131: PORTB = 0B11111111;
+   560  07D2  30FF               	movlw	255
+   561  07D3  1283               	bcf	3,5	;RP0=0, select bank0
+   562  07D4  1303               	bcf	3,6	;RP1=0, select bank0
+   563  07D5  0086               	movwf	6	;volatile
+   564                           
+   565                           ;LedRotativo.c: 132: _delay((unsigned long)((500)*(4000000/4000.0)));
+   566  07D6  3003               	movlw	3
+   567  07D7  00FA               	movwf	??_Secuencia4+2
+   568  07D8  308A               	movlw	138
+   569  07D9  00F9               	movwf	??_Secuencia4+1
+   570  07DA  3055               	movlw	85
+   571  07DB  00F8               	movwf	??_Secuencia4
+   572  07DC                     u177:	
+   573  07DC  0BF8               	decfsz	??_Secuencia4,f
+   574  07DD  2FDC               	goto	u177
+   575  07DE  0BF9               	decfsz	??_Secuencia4+1,f
+   576  07DF  2FDC               	goto	u177
+   577  07E0  0BFA               	decfsz	??_Secuencia4+2,f
+   578  07E1  2FDC               	goto	u177
+   579  07E2  2FE3               	nop2
+   580                           
+   581                           ;LedRotativo.c: 133: PORTB = 0B00000000;
+   582  07E3  1283               	bcf	3,5	;RP0=0, select bank0
+   583  07E4  1303               	bcf	3,6	;RP1=0, select bank0
+   584  07E5  0186               	clrf	6	;volatile
+   585                           
+   586                           ;LedRotativo.c: 134: _delay((unsigned long)((500)*(4000000/4000.0)));
+   587  07E6  3003               	movlw	3
+   588  07E7  00FA               	movwf	??_Secuencia4+2
+   589  07E8  308A               	movlw	138
+   590  07E9  00F9               	movwf	??_Secuencia4+1
+   591  07EA  3055               	movlw	85
+   592  07EB  00F8               	movwf	??_Secuencia4
+   593  07EC                     u187:	
+   594  07EC  0BF8               	decfsz	??_Secuencia4,f
+   595  07ED  2FEC               	goto	u187
+   596  07EE  0BF9               	decfsz	??_Secuencia4+1,f
+   597  07EF  2FEC               	goto	u187
+   598  07F0  0BFA               	decfsz	??_Secuencia4+2,f
+   599  07F1  2FEC               	goto	u187
+   600  07F2  2FF3               	nop2
+   601  07F3  0008               	return
+   602  07F4                     __end_of_Secuencia4:	
+   603                           
+   604                           	psect	text2
+   605  063C                     __ptext2:	
+   606 ;; *************** function _Secuencia3 *****************
+   607 ;; Defined at:
+   608 ;;		line 104 in file "LedRotativo.c"
+   609 ;; Parameters:    Size  Location     Type
+   610 ;;		None
+   611 ;; Auto vars:     Size  Location     Type
+   612 ;;		None
+   613 ;; Return value:  Size  Location     Type
+   614 ;;                  1    wreg      void 
+   615 ;; Registers used:
+   616 ;;		wreg
+   617 ;; Tracked objects:
+   618 ;;		On entry : 0/0
+   619 ;;		On exit  : 0/0
+   620 ;;		Unchanged: 0/0
+   621 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   622 ;;      Params:         0       0       0       0       0
+   623 ;;      Locals:         0       0       0       0       0
+   624 ;;      Temps:          3       0       0       0       0
+   625 ;;      Totals:         3       0       0       0       0
+   626 ;;Total ram usage:        3 bytes
+   627 ;; Hardware stack levels used:    1
+   628 ;; This function calls:
+   629 ;;		Nothing
+   630 ;; This function is called by:
+   631 ;;		_main
+   632 ;; This function uses a non-reentrant model
+   633 ;;
+   634                           
+   635                           
+   636                           ;psect for function _Secuencia3
+   637  063C                     _Secuencia3:	
+   638                           
+   639                           ;LedRotativo.c: 105: PORTB = 0B00011000;
+   640                           
+   641                           ;incstack = 0
+   642                           ; Regs used in _Secuencia3: [wreg]
+   643  063C  3018               	movlw	24
+   644  063D  1283               	bcf	3,5	;RP0=0, select bank0
+   645  063E  1303               	bcf	3,6	;RP1=0, select bank0
+   646  063F  0086               	movwf	6	;volatile
+   647                           
+   648                           ;LedRotativo.c: 106: _delay((unsigned long)((500)*(4000000/4000.0)));
+   649  0640  3003               	movlw	3
+   650  0641  00FA               	movwf	??_Secuencia3+2
+   651  0642  308A               	movlw	138
+   652  0643  00F9               	movwf	??_Secuencia3+1
+   653  0644  3055               	movlw	85
+   654  0645  00F8               	movwf	??_Secuencia3
+   655  0646                     u197:	
+   656  0646  0BF8               	decfsz	??_Secuencia3,f
+   657  0647  2E46               	goto	u197
+   658  0648  0BF9               	decfsz	??_Secuencia3+1,f
+   659  0649  2E46               	goto	u197
+   660  064A  0BFA               	decfsz	??_Secuencia3+2,f
+   661  064B  2E46               	goto	u197
+   662  064C  2E4D               	nop2
+   663                           
+   664                           ;LedRotativo.c: 107: PORTB = 0B00100100;
+   665  064D  3024               	movlw	36
+   666  064E  1283               	bcf	3,5	;RP0=0, select bank0
+   667  064F  1303               	bcf	3,6	;RP1=0, select bank0
+   668  0650  0086               	movwf	6	;volatile
+   669                           
+   670                           ;LedRotativo.c: 108: _delay((unsigned long)((500)*(4000000/4000.0)));
+   671  0651  3003               	movlw	3
+   672  0652  00FA               	movwf	??_Secuencia3+2
+   673  0653  308A               	movlw	138
+   674  0654  00F9               	movwf	??_Secuencia3+1
+   675  0655  3055               	movlw	85
+   676  0656  00F8               	movwf	??_Secuencia3
+   677  0657                     u207:	
+   678  0657  0BF8               	decfsz	??_Secuencia3,f
+   679  0658  2E57               	goto	u207
+   680  0659  0BF9               	decfsz	??_Secuencia3+1,f
+   681  065A  2E57               	goto	u207
+   682  065B  0BFA               	decfsz	??_Secuencia3+2,f
+   683  065C  2E57               	goto	u207
+   684  065D  2E5E               	nop2
+   685                           
+   686                           ;LedRotativo.c: 109: PORTB = 0B01000010;
+   687  065E  3042               	movlw	66
+   688  065F  1283               	bcf	3,5	;RP0=0, select bank0
+   689  0660  1303               	bcf	3,6	;RP1=0, select bank0
+   690  0661  0086               	movwf	6	;volatile
+   691                           
+   692                           ;LedRotativo.c: 110: _delay((unsigned long)((500)*(4000000/4000.0)));
+   693  0662  3003               	movlw	3
+   694  0663  00FA               	movwf	??_Secuencia3+2
+   695  0664  308A               	movlw	138
+   696  0665  00F9               	movwf	??_Secuencia3+1
+   697  0666  3055               	movlw	85
+   698  0667  00F8               	movwf	??_Secuencia3
+   699  0668                     u217:	
+   700  0668  0BF8               	decfsz	??_Secuencia3,f
+   701  0669  2E68               	goto	u217
+   702  066A  0BF9               	decfsz	??_Secuencia3+1,f
+   703  066B  2E68               	goto	u217
+   704  066C  0BFA               	decfsz	??_Secuencia3+2,f
+   705  066D  2E68               	goto	u217
+   706  066E  2E6F               	nop2
+   707                           
+   708                           ;LedRotativo.c: 111: PORTB = 0B10000001;
+   709  066F  3081               	movlw	129
+   710  0670  1283               	bcf	3,5	;RP0=0, select bank0
+   711  0671  1303               	bcf	3,6	;RP1=0, select bank0
+   712  0672  0086               	movwf	6	;volatile
+   713                           
+   714                           ;LedRotativo.c: 112: _delay((unsigned long)((500)*(4000000/4000.0)));
+   715  0673  3003               	movlw	3
+   716  0674  00FA               	movwf	??_Secuencia3+2
+   717  0675  308A               	movlw	138
+   718  0676  00F9               	movwf	??_Secuencia3+1
+   719  0677  3055               	movlw	85
+   720  0678  00F8               	movwf	??_Secuencia3
+   721  0679                     u227:	
+   722  0679  0BF8               	decfsz	??_Secuencia3,f
+   723  067A  2E79               	goto	u227
+   724  067B  0BF9               	decfsz	??_Secuencia3+1,f
+   725  067C  2E79               	goto	u227
+   726  067D  0BFA               	decfsz	??_Secuencia3+2,f
+   727  067E  2E79               	goto	u227
+   728  067F  2E80               	nop2
+   729  0680  0008               	return
+   730  0681                     __end_of_Secuencia3:	
+   731                           
+   732                           	psect	text3
+   733  05F7                     __ptext3:	
+   734 ;; *************** function _Secuencia2 *****************
+   735 ;; Defined at:
+   736 ;;		line 92 in file "LedRotativo.c"
+   737 ;; Parameters:    Size  Location     Type
+   738 ;;		None
+   739 ;; Auto vars:     Size  Location     Type
+   740 ;;		None
+   741 ;; Return value:  Size  Location     Type
+   742 ;;                  1    wreg      void 
+   743 ;; Registers used:
+   744 ;;		wreg
+   745 ;; Tracked objects:
+   746 ;;		On entry : 0/0
+   747 ;;		On exit  : 0/0
+   748 ;;		Unchanged: 0/0
+   749 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   750 ;;      Params:         0       0       0       0       0
+   751 ;;      Locals:         0       0       0       0       0
+   752 ;;      Temps:          3       0       0       0       0
+   753 ;;      Totals:         3       0       0       0       0
+   754 ;;Total ram usage:        3 bytes
+   755 ;; Hardware stack levels used:    1
+   756 ;; This function calls:
+   757 ;;		Nothing
+   758 ;; This function is called by:
+   759 ;;		_main
+   760 ;; This function uses a non-reentrant model
+   761 ;;
+   762                           
+   763                           
+   764                           ;psect for function _Secuencia2
+   765  05F7                     _Secuencia2:	
+   766                           
+   767                           ;LedRotativo.c: 93: PORTB = 0B10000001;
+   768                           
+   769                           ;incstack = 0
+   770                           ; Regs used in _Secuencia2: [wreg]
+   771  05F7  3081               	movlw	129
+   772  05F8  1283               	bcf	3,5	;RP0=0, select bank0
+   773  05F9  1303               	bcf	3,6	;RP1=0, select bank0
+   774  05FA  0086               	movwf	6	;volatile
+   775                           
+   776                           ;LedRotativo.c: 94: _delay((unsigned long)((500)*(4000000/4000.0)));
+   777  05FB  3003               	movlw	3
+   778  05FC  00FA               	movwf	??_Secuencia2+2
+   779  05FD  308A               	movlw	138
+   780  05FE  00F9               	movwf	??_Secuencia2+1
+   781  05FF  3055               	movlw	85
+   782  0600  00F8               	movwf	??_Secuencia2
+   783  0601                     u237:	
+   784  0601  0BF8               	decfsz	??_Secuencia2,f
+   785  0602  2E01               	goto	u237
+   786  0603  0BF9               	decfsz	??_Secuencia2+1,f
+   787  0604  2E01               	goto	u237
+   788  0605  0BFA               	decfsz	??_Secuencia2+2,f
+   789  0606  2E01               	goto	u237
+   790  0607  2E08               	nop2
+   791                           
+   792                           ;LedRotativo.c: 95: PORTB = 0B01000010;
+   793  0608  3042               	movlw	66
+   794  0609  1283               	bcf	3,5	;RP0=0, select bank0
+   795  060A  1303               	bcf	3,6	;RP1=0, select bank0
+   796  060B  0086               	movwf	6	;volatile
+   797                           
+   798                           ;LedRotativo.c: 96: _delay((unsigned long)((500)*(4000000/4000.0)));
+   799  060C  3003               	movlw	3
+   800  060D  00FA               	movwf	??_Secuencia2+2
+   801  060E  308A               	movlw	138
+   802  060F  00F9               	movwf	??_Secuencia2+1
+   803  0610  3055               	movlw	85
+   804  0611  00F8               	movwf	??_Secuencia2
+   805  0612                     u247:	
+   806  0612  0BF8               	decfsz	??_Secuencia2,f
+   807  0613  2E12               	goto	u247
+   808  0614  0BF9               	decfsz	??_Secuencia2+1,f
+   809  0615  2E12               	goto	u247
+   810  0616  0BFA               	decfsz	??_Secuencia2+2,f
+   811  0617  2E12               	goto	u247
+   812  0618  2E19               	nop2
+   813                           
+   814                           ;LedRotativo.c: 97: PORTB = 0B00100100;
+   815  0619  3024               	movlw	36
+   816  061A  1283               	bcf	3,5	;RP0=0, select bank0
+   817  061B  1303               	bcf	3,6	;RP1=0, select bank0
+   818  061C  0086               	movwf	6	;volatile
+   819                           
+   820                           ;LedRotativo.c: 98: _delay((unsigned long)((500)*(4000000/4000.0)));
+   821  061D  3003               	movlw	3
+   822  061E  00FA               	movwf	??_Secuencia2+2
+   823  061F  308A               	movlw	138
+   824  0620  00F9               	movwf	??_Secuencia2+1
+   825  0621  3055               	movlw	85
+   826  0622  00F8               	movwf	??_Secuencia2
+   827  0623                     u257:	
+   828  0623  0BF8               	decfsz	??_Secuencia2,f
+   829  0624  2E23               	goto	u257
+   830  0625  0BF9               	decfsz	??_Secuencia2+1,f
+   831  0626  2E23               	goto	u257
+   832  0627  0BFA               	decfsz	??_Secuencia2+2,f
+   833  0628  2E23               	goto	u257
+   834  0629  2E2A               	nop2
+   835                           
+   836                           ;LedRotativo.c: 99: PORTB = 0B00011000;
+   837  062A  3018               	movlw	24
+   838  062B  1283               	bcf	3,5	;RP0=0, select bank0
+   839  062C  1303               	bcf	3,6	;RP1=0, select bank0
+   840  062D  0086               	movwf	6	;volatile
+   841                           
+   842                           ;LedRotativo.c: 100: _delay((unsigned long)((500)*(4000000/4000.0)));
+   843  062E  3003               	movlw	3
+   844  062F  00FA               	movwf	??_Secuencia2+2
+   845  0630  308A               	movlw	138
+   846  0631  00F9               	movwf	??_Secuencia2+1
+   847  0632  3055               	movlw	85
+   848  0633  00F8               	movwf	??_Secuencia2
+   849  0634                     u267:	
+   850  0634  0BF8               	decfsz	??_Secuencia2,f
+   851  0635  2E34               	goto	u267
+   852  0636  0BF9               	decfsz	??_Secuencia2+1,f
+   853  0637  2E34               	goto	u267
+   854  0638  0BFA               	decfsz	??_Secuencia2+2,f
+   855  0639  2E34               	goto	u267
+   856  063A  2E3B               	nop2
+   857  063B  0008               	return
+   858  063C                     __end_of_Secuencia2:	
+   859                           
+   860                           	psect	text4
+   861  06D2                     __ptext4:	
+   862 ;; *************** function _Secuencia1 *****************
+   863 ;; Defined at:
+   864 ;;		line 73 in file "LedRotativo.c"
+   865 ;; Parameters:    Size  Location     Type
+   866 ;;		None
+   867 ;; Auto vars:     Size  Location     Type
+   868 ;;		None
+   869 ;; Return value:  Size  Location     Type
+   870 ;;                  1    wreg      void 
+   871 ;; Registers used:
+   872 ;;		wreg
+   873 ;; Tracked objects:
+   874 ;;		On entry : 0/0
+   875 ;;		On exit  : 0/0
+   876 ;;		Unchanged: 0/0
+   877 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   878 ;;      Params:         0       0       0       0       0
+   879 ;;      Locals:         0       0       0       0       0
+   880 ;;      Temps:          3       0       0       0       0
+   881 ;;      Totals:         3       0       0       0       0
+   882 ;;Total ram usage:        3 bytes
+   883 ;; Hardware stack levels used:    1
+   884 ;; This function calls:
+   885 ;;		Nothing
+   886 ;; This function is called by:
+   887 ;;		_main
+   888 ;; This function uses a non-reentrant model
+   889 ;;
+   890                           
+   891                           
+   892                           ;psect for function _Secuencia1
+   893  06D2                     _Secuencia1:	
+   894                           
+   895                           ;LedRotativo.c: 74: PORTB = 0B00000001;
+   896                           
+   897                           ;incstack = 0
+   898                           ; Regs used in _Secuencia1: [wreg]
+   899  06D2  3001               	movlw	1
+   900  06D3  1283               	bcf	3,5	;RP0=0, select bank0
+   901  06D4  1303               	bcf	3,6	;RP1=0, select bank0
+   902  06D5  0086               	movwf	6	;volatile
+   903                           
+   904                           ;LedRotativo.c: 75: _delay((unsigned long)((500)*(4000000/4000.0)));
+   905  06D6  3003               	movlw	3
+   906  06D7  00FA               	movwf	??_Secuencia1+2
+   907  06D8  308A               	movlw	138
+   908  06D9  00F9               	movwf	??_Secuencia1+1
+   909  06DA  3055               	movlw	85
+   910  06DB  00F8               	movwf	??_Secuencia1
+   911  06DC                     u277:	
+   912  06DC  0BF8               	decfsz	??_Secuencia1,f
+   913  06DD  2EDC               	goto	u277
+   914  06DE  0BF9               	decfsz	??_Secuencia1+1,f
+   915  06DF  2EDC               	goto	u277
+   916  06E0  0BFA               	decfsz	??_Secuencia1+2,f
+   917  06E1  2EDC               	goto	u277
+   918  06E2  2EE3               	nop2
+   919                           
+   920                           ;LedRotativo.c: 76: PORTB = 0B00000010;
+   921  06E3  3002               	movlw	2
+   922  06E4  1283               	bcf	3,5	;RP0=0, select bank0
+   923  06E5  1303               	bcf	3,6	;RP1=0, select bank0
+   924  06E6  0086               	movwf	6	;volatile
+   925                           
+   926                           ;LedRotativo.c: 77: _delay((unsigned long)((500)*(4000000/4000.0)));
+   927  06E7  3003               	movlw	3
+   928  06E8  00FA               	movwf	??_Secuencia1+2
+   929  06E9  308A               	movlw	138
+   930  06EA  00F9               	movwf	??_Secuencia1+1
+   931  06EB  3055               	movlw	85
+   932  06EC  00F8               	movwf	??_Secuencia1
+   933  06ED                     u287:	
+   934  06ED  0BF8               	decfsz	??_Secuencia1,f
+   935  06EE  2EED               	goto	u287
+   936  06EF  0BF9               	decfsz	??_Secuencia1+1,f
+   937  06F0  2EED               	goto	u287
+   938  06F1  0BFA               	decfsz	??_Secuencia1+2,f
+   939  06F2  2EED               	goto	u287
+   940  06F3  2EF4               	nop2
+   941                           
+   942                           ;LedRotativo.c: 78: PORTB = 0B00000100;
+   943  06F4  3004               	movlw	4
+   944  06F5  1283               	bcf	3,5	;RP0=0, select bank0
+   945  06F6  1303               	bcf	3,6	;RP1=0, select bank0
+   946  06F7  0086               	movwf	6	;volatile
+   947                           
+   948                           ;LedRotativo.c: 79: _delay((unsigned long)((500)*(4000000/4000.0)));
+   949  06F8  3003               	movlw	3
+   950  06F9  00FA               	movwf	??_Secuencia1+2
+   951  06FA  308A               	movlw	138
+   952  06FB  00F9               	movwf	??_Secuencia1+1
+   953  06FC  3055               	movlw	85
+   954  06FD  00F8               	movwf	??_Secuencia1
+   955  06FE                     u297:	
+   956  06FE  0BF8               	decfsz	??_Secuencia1,f
+   957  06FF  2EFE               	goto	u297
+   958  0700  0BF9               	decfsz	??_Secuencia1+1,f
+   959  0701  2EFE               	goto	u297
+   960  0702  0BFA               	decfsz	??_Secuencia1+2,f
+   961  0703  2EFE               	goto	u297
+   962  0704  2F05               	nop2
+   963                           
+   964                           ;LedRotativo.c: 80: PORTB = 0B00001000;
+   965  0705  3008               	movlw	8
+   966  0706  1283               	bcf	3,5	;RP0=0, select bank0
+   967  0707  1303               	bcf	3,6	;RP1=0, select bank0
+   968  0708  0086               	movwf	6	;volatile
+   969                           
+   970                           ;LedRotativo.c: 81: _delay((unsigned long)((500)*(4000000/4000.0)));
+   971  0709  3003               	movlw	3
+   972  070A  00FA               	movwf	??_Secuencia1+2
+   973  070B  308A               	movlw	138
+   974  070C  00F9               	movwf	??_Secuencia1+1
+   975  070D  3055               	movlw	85
+   976  070E  00F8               	movwf	??_Secuencia1
+   977  070F                     u307:	
+   978  070F  0BF8               	decfsz	??_Secuencia1,f
+   979  0710  2F0F               	goto	u307
+   980  0711  0BF9               	decfsz	??_Secuencia1+1,f
+   981  0712  2F0F               	goto	u307
+   982  0713  0BFA               	decfsz	??_Secuencia1+2,f
+   983  0714  2F0F               	goto	u307
+   984  0715  2F16               	nop2
+   985                           
+   986                           ;LedRotativo.c: 82: PORTB = 0B00010000;
+   987  0716  3010               	movlw	16
+   988  0717  1283               	bcf	3,5	;RP0=0, select bank0
+   989  0718  1303               	bcf	3,6	;RP1=0, select bank0
+   990  0719  0086               	movwf	6	;volatile
+   991                           
+   992                           ;LedRotativo.c: 83: _delay((unsigned long)((500)*(4000000/4000.0)));
+   993  071A  3003               	movlw	3
+   994  071B  00FA               	movwf	??_Secuencia1+2
+   995  071C  308A               	movlw	138
+   996  071D  00F9               	movwf	??_Secuencia1+1
+   997  071E  3055               	movlw	85
+   998  071F  00F8               	movwf	??_Secuencia1
+   999  0720                     u317:	
+  1000  0720  0BF8               	decfsz	??_Secuencia1,f
+  1001  0721  2F20               	goto	u317
+  1002  0722  0BF9               	decfsz	??_Secuencia1+1,f
+  1003  0723  2F20               	goto	u317
+  1004  0724  0BFA               	decfsz	??_Secuencia1+2,f
+  1005  0725  2F20               	goto	u317
+  1006  0726  2F27               	nop2
+  1007                           
+  1008                           ;LedRotativo.c: 84: PORTB = 0B00100000;
+  1009  0727  3020               	movlw	32
+  1010  0728  1283               	bcf	3,5	;RP0=0, select bank0
+  1011  0729  1303               	bcf	3,6	;RP1=0, select bank0
+  1012  072A  0086               	movwf	6	;volatile
+  1013                           
+  1014                           ;LedRotativo.c: 85: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1015  072B  3003               	movlw	3
+  1016  072C  00FA               	movwf	??_Secuencia1+2
+  1017  072D  308A               	movlw	138
+  1018  072E  00F9               	movwf	??_Secuencia1+1
+  1019  072F  3055               	movlw	85
+  1020  0730  00F8               	movwf	??_Secuencia1
+  1021  0731                     u327:	
+  1022  0731  0BF8               	decfsz	??_Secuencia1,f
+  1023  0732  2F31               	goto	u327
+  1024  0733  0BF9               	decfsz	??_Secuencia1+1,f
+  1025  0734  2F31               	goto	u327
+  1026  0735  0BFA               	decfsz	??_Secuencia1+2,f
+  1027  0736  2F31               	goto	u327
+  1028  0737  2F38               	nop2
+  1029                           
+  1030                           ;LedRotativo.c: 86: PORTB = 0B01000000;
+  1031  0738  3040               	movlw	64
+  1032  0739  1283               	bcf	3,5	;RP0=0, select bank0
+  1033  073A  1303               	bcf	3,6	;RP1=0, select bank0
+  1034  073B  0086               	movwf	6	;volatile
+  1035                           
+  1036                           ;LedRotativo.c: 87: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1037  073C  3003               	movlw	3
+  1038  073D  00FA               	movwf	??_Secuencia1+2
+  1039  073E  308A               	movlw	138
+  1040  073F  00F9               	movwf	??_Secuencia1+1
+  1041  0740  3055               	movlw	85
+  1042  0741  00F8               	movwf	??_Secuencia1
+  1043  0742                     u337:	
+  1044  0742  0BF8               	decfsz	??_Secuencia1,f
+  1045  0743  2F42               	goto	u337
+  1046  0744  0BF9               	decfsz	??_Secuencia1+1,f
+  1047  0745  2F42               	goto	u337
+  1048  0746  0BFA               	decfsz	??_Secuencia1+2,f
+  1049  0747  2F42               	goto	u337
+  1050  0748  2F49               	nop2
+  1051                           
+  1052                           ;LedRotativo.c: 88: PORTB = 0B10000000;
+  1053  0749  3080               	movlw	128
+  1054  074A  1283               	bcf	3,5	;RP0=0, select bank0
+  1055  074B  1303               	bcf	3,6	;RP1=0, select bank0
+  1056  074C  0086               	movwf	6	;volatile
+  1057                           
+  1058                           ;LedRotativo.c: 89: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1059  074D  3003               	movlw	3
+  1060  074E  00FA               	movwf	??_Secuencia1+2
+  1061  074F  308A               	movlw	138
+  1062  0750  00F9               	movwf	??_Secuencia1+1
+  1063  0751  3055               	movlw	85
+  1064  0752  00F8               	movwf	??_Secuencia1
+  1065  0753                     u347:	
+  1066  0753  0BF8               	decfsz	??_Secuencia1,f
+  1067  0754  2F53               	goto	u347
+  1068  0755  0BF9               	decfsz	??_Secuencia1+1,f
+  1069  0756  2F53               	goto	u347
+  1070  0757  0BFA               	decfsz	??_Secuencia1+2,f
+  1071  0758  2F53               	goto	u347
+  1072  0759  2F5A               	nop2
+  1073  075A  0008               	return
+  1074  075B                     __end_of_Secuencia1:	
+  1075  007E                     btemp	set	126	;btemp
+  1076  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         8
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      3      11
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_Secuencia1
+    _main->_Secuencia2
+    _main->_Secuencia3
+    _main->_Secuencia4
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                         _Secuencia1
+                         _Secuencia2
+                         _Secuencia3
+                         _Secuencia4
+ ---------------------------------------------------------------------------------
+ (1) _Secuencia4                                           3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _Secuencia3                                           3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _Secuencia2                                           3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _Secuencia1                                           3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Secuencia1
+   _Secuencia2
+   _Secuencia3
+   _Secuencia4
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      3       B       1       78.6%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0       B       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0       B      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.43 build -156212558 
+Symbol Table                                                                                   Fri Sep 01 11:54:44 2017
+
+                    l571 06A7                      l563 069B                      l557 068E  
+                    l583 06BF                      l575 06AD                      l567 06A1  
+                    l587 06C8                      l579 06B6                      u107 0765  
+                    u117 0776                      u207 0657                      u127 0787  
+                    u217 0668                      u137 0798                      u307 070F  
+                    u227 0679                      u147 07A9                      u317 0720  
+                    u237 0601                      u157 07BA                      u327 0731  
+                    u247 0612                      u167 07CB                      u337 0742  
+                    u257 0623                      u177 07DC                      u347 0753  
+                    u267 0634                      u187 07EC                      u277 06DC  
+                    u197 0646                      u287 06ED                      u297 06FE  
+                   _main 0681                     btemp 007E                     start 0000  
+                  ?_main 0078                    _PORTB 0006                    _PORTC 0007  
+                  _TRISB 0086                    _TRISC 0087                    _TXREG 0019  
+                  status 0003                    wtemp0 007E          __initialization 07F4  
+           __end_of_main 06D2                   ??_main 007B               _Secuencia1 06D2  
+             _Secuencia2 05F7               _Secuencia3 063C               _Secuencia4 075B  
+                 _boton1 0076                   _boton2 0074                   _boton3 0072  
+                 _boton4 0070  __end_of__initialization 07FC           __pcstackCOMMON 0078  
+            ?_Secuencia1 0078              ?_Secuencia2 0078              ?_Secuencia3 0078  
+            ?_Secuencia4 0078               __pmaintext 0681      __size_of_Secuencia1 0089  
+    __size_of_Secuencia2 0045      __size_of_Secuencia3 0045      __size_of_Secuencia4 0099  
+                __ptext1 075B                  __ptext2 063C                  __ptext3 05F7  
+                __ptext4 06D2     end_of_initialization 07FC                _RCSTAbits 0018  
+              _PORTCbits 0007                _TXSTAbits 0098      start_initialization 07F4  
+           ??_Secuencia1 0078             ??_Secuencia2 0078             ??_Secuencia3 0078  
+           ??_Secuencia4 0078       __end_of_Secuencia1 075B       __end_of_Secuencia2 063C  
+     __end_of_Secuencia3 0681       __end_of_Secuencia4 07F4              __pbssCOMMON 0070  
+              ___latbits 0002                 _PIR1bits 000C            __size_of_main 0051  
