@@ -1626,702 +1626,702 @@ Version 3.2 HI-TECH Software Intermediate Code
 "42
 [e :UE 143 ]
 }
-"12 LedRotativo.c
+"13 LedRotativo.c
 [v _boton1 `i ~T0 @X0 1 e ]
 [i _boton1
 -> 0 `i
 ]
-[; ;LedRotativo.c: 12: int boton1 = 0;
-"13
+[; ;LedRotativo.c: 13: int boton1 = 0;
+"14
 [v _boton2 `i ~T0 @X0 1 e ]
 [i _boton2
 -> 0 `i
 ]
-[; ;LedRotativo.c: 13: int boton2 = 0;
-"14
+[; ;LedRotativo.c: 14: int boton2 = 0;
+"15
 [v _boton3 `i ~T0 @X0 1 e ]
 [i _boton3
 -> 0 `i
 ]
-[; ;LedRotativo.c: 14: int boton3 = 0;
-"15
+[; ;LedRotativo.c: 15: int boton3 = 0;
+"16
 [v _boton4 `i ~T0 @X0 1 e ]
 [i _boton4
 -> 0 `i
 ]
-[; ;LedRotativo.c: 15: int boton4 = 0;
-"16
+[; ;LedRotativo.c: 16: int boton4 = 0;
+"17
 [v _bandera `i ~T0 @X0 1 e ]
 [i _bandera
 -> 0 `i
 ]
-[; ;LedRotativo.c: 16: int bandera = 0;
+[; ;LedRotativo.c: 17: int bandera = 0;
 [; ;LedRotativo.c: 23: void Secuencia1(int aux);
 [; ;LedRotativo.c: 24: void Secuencia2();
 [; ;LedRotativo.c: 25: void Secuencia3();
 [; ;LedRotativo.c: 26: void Secuencia4();
 [; ;LedRotativo.c: 27: void cambio();
 [v $root$_main `(v ~T0 @X0 0 e ]
-"30
+"31
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;LedRotativo.c: 30: void main(void) {
+[; ;LedRotativo.c: 31: void main(void) {
 [e :U _main ]
 [f ]
-[; ;LedRotativo.c: 31: TRISB = 0;
-"31
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;LedRotativo.c: 32: PORTB = 0;
+[; ;LedRotativo.c: 32: TRISB = 0;
 "32
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;LedRotativo.c: 33: TRISC = 0b11111111;
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;LedRotativo.c: 33: PORTB = 0;
 "33
-[e = _TRISC -> -> 255 `i `uc ]
-[; ;LedRotativo.c: 34: PORTC = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;LedRotativo.c: 34: TRISC = 0b11111111;
 "34
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;LedRotativo.c: 35: while (1){
+[e = _TRISC -> -> 255 `i `uc ]
+[; ;LedRotativo.c: 35: PORTC = 0;
 "35
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;LedRotativo.c: 36: while (1){
+"36
 [e :U 146 ]
 {
-[; ;LedRotativo.c: 36: if(bandera == 0){
-"36
+[; ;LedRotativo.c: 37: if(bandera == 0){
+"37
 [e $ ! == _bandera -> 0 `i 148  ]
 {
-[; ;LedRotativo.c: 37: Secuencia1(0);
-"37
-[e ( _Secuencia1 (1 -> 0 `i ]
+[; ;LedRotativo.c: 38: Secuencia1(0);
 "38
+[e ( _Secuencia1 (1 -> 0 `i ]
+"39
 }
 [e :U 148 ]
-[; ;LedRotativo.c: 38: }
-[; ;LedRotativo.c: 39: cambio();
-"39
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 40: if (bandera == 1)
+[; ;LedRotativo.c: 39: }
+[; ;LedRotativo.c: 40: cambio();
 "40
-[e $ ! == _bandera -> 1 `i 149  ]
-[; ;LedRotativo.c: 41: Secuencia1(1);
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 41: if (bandera == 1)
 "41
+[e $ ! == _bandera -> 1 `i 149  ]
+[; ;LedRotativo.c: 42: Secuencia1(1);
+"42
 [e ( _Secuencia1 (1 -> 1 `i ]
 [e $U 150  ]
-"42
-[e :U 149 ]
-[; ;LedRotativo.c: 42: else if(bandera ==2)
-[e $ ! == _bandera -> 2 `i 151  ]
-[; ;LedRotativo.c: 43: Secuencia2();
 "43
+[e :U 149 ]
+[; ;LedRotativo.c: 43: else if(bandera ==2)
+[e $ ! == _bandera -> 2 `i 151  ]
+[; ;LedRotativo.c: 44: Secuencia2();
+"44
 [e ( _Secuencia2 ..  ]
 [e $U 152  ]
-"44
-[e :U 151 ]
-[; ;LedRotativo.c: 44: else if(bandera ==3)
-[e $ ! == _bandera -> 3 `i 153  ]
-[; ;LedRotativo.c: 45: Secuencia3();
 "45
+[e :U 151 ]
+[; ;LedRotativo.c: 45: else if(bandera ==3)
+[e $ ! == _bandera -> 3 `i 153  ]
+[; ;LedRotativo.c: 46: Secuencia3();
+"46
 [e ( _Secuencia3 ..  ]
 [e $U 154  ]
-"46
-[e :U 153 ]
-[; ;LedRotativo.c: 46: else if(bandera ==4)
-[e $ ! == _bandera -> 4 `i 155  ]
-[; ;LedRotativo.c: 47: Secuencia4();
 "47
+[e :U 153 ]
+[; ;LedRotativo.c: 47: else if(bandera ==4)
+[e $ ! == _bandera -> 4 `i 155  ]
+[; ;LedRotativo.c: 48: Secuencia4();
+"48
 [e ( _Secuencia4 ..  ]
 [e :U 155 ]
-"49
+"50
 [e :U 154 ]
 [e :U 152 ]
 [e :U 150 ]
 }
 [e :U 145 ]
-"35
+"36
 [e $U 146  ]
 [e :U 147 ]
-[; ;LedRotativo.c: 49: }
 [; ;LedRotativo.c: 50: }
-"50
+[; ;LedRotativo.c: 51: }
+"51
 [e :UE 144 ]
 }
-"52
+"53
 [v _cambio `(v ~T0 @X0 1 ef ]
 {
-[; ;LedRotativo.c: 52: void cambio(){
+[; ;LedRotativo.c: 53: void cambio(){
 [e :U _cambio ]
 [f ]
-[; ;LedRotativo.c: 53: if (PORTCbits.RC0 == 1){
-"53
+[; ;LedRotativo.c: 54: if (PORTCbits.RC0 == 1){
+"54
 [e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 157  ]
 {
-[; ;LedRotativo.c: 54: boton1 = 1;
-"54
-[e = _boton1 -> 1 `i ]
-[; ;LedRotativo.c: 55: boton2 = 0;
+[; ;LedRotativo.c: 55: boton1 = 1;
 "55
-[e = _boton2 -> 0 `i ]
-[; ;LedRotativo.c: 56: boton3 = 0;
+[e = _boton1 -> 1 `i ]
+[; ;LedRotativo.c: 56: boton2 = 0;
 "56
-[e = _boton3 -> 0 `i ]
-[; ;LedRotativo.c: 57: boton4 = 0;
+[e = _boton2 -> 0 `i ]
+[; ;LedRotativo.c: 57: boton3 = 0;
 "57
-[e = _boton4 -> 0 `i ]
+[e = _boton3 -> 0 `i ]
+[; ;LedRotativo.c: 58: boton4 = 0;
 "58
-}
-[; ;LedRotativo.c: 58: }
-[e $U 158  ]
+[e = _boton4 -> 0 `i ]
 "59
+}
+[; ;LedRotativo.c: 59: }
+[e $U 158  ]
+"60
 [e :U 157 ]
-[; ;LedRotativo.c: 59: else if (PORTCbits.RC1 == 1){
+[; ;LedRotativo.c: 60: else if (PORTCbits.RC1 == 1){
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 159  ]
 {
-[; ;LedRotativo.c: 60: boton1 = 0;
-"60
-[e = _boton1 -> 0 `i ]
-[; ;LedRotativo.c: 61: boton2 = 1;
+[; ;LedRotativo.c: 61: boton1 = 0;
 "61
-[e = _boton2 -> 1 `i ]
-[; ;LedRotativo.c: 62: boton3 = 0;
+[e = _boton1 -> 0 `i ]
+[; ;LedRotativo.c: 62: boton2 = 1;
 "62
-[e = _boton3 -> 0 `i ]
-[; ;LedRotativo.c: 63: boton4 = 0;
+[e = _boton2 -> 1 `i ]
+[; ;LedRotativo.c: 63: boton3 = 0;
 "63
+[e = _boton3 -> 0 `i ]
+[; ;LedRotativo.c: 64: boton4 = 0;
+"64
 [e = _boton4 -> 0 `i ]
-"65
-}
-[; ;LedRotativo.c: 65: }
-[e $U 160  ]
 "66
+}
+[; ;LedRotativo.c: 66: }
+[e $U 160  ]
+"67
 [e :U 159 ]
-[; ;LedRotativo.c: 66: else if (PORTCbits.RC2 == 1){
+[; ;LedRotativo.c: 67: else if (PORTCbits.RC2 == 1){
 [e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 161  ]
 {
-[; ;LedRotativo.c: 67: boton1 = 0;
-"67
-[e = _boton1 -> 0 `i ]
-[; ;LedRotativo.c: 68: boton2 = 0;
+[; ;LedRotativo.c: 68: boton1 = 0;
 "68
-[e = _boton2 -> 0 `i ]
-[; ;LedRotativo.c: 69: boton3 = 1;
+[e = _boton1 -> 0 `i ]
+[; ;LedRotativo.c: 69: boton2 = 0;
 "69
-[e = _boton3 -> 1 `i ]
-[; ;LedRotativo.c: 70: boton4 = 0;
+[e = _boton2 -> 0 `i ]
+[; ;LedRotativo.c: 70: boton3 = 1;
 "70
+[e = _boton3 -> 1 `i ]
+[; ;LedRotativo.c: 71: boton4 = 0;
+"71
 [e = _boton4 -> 0 `i ]
-"72
-}
-[; ;LedRotativo.c: 72: }
-[e $U 162  ]
 "73
+}
+[; ;LedRotativo.c: 73: }
+[e $U 162  ]
+"74
 [e :U 161 ]
-[; ;LedRotativo.c: 73: else if (PORTCbits.RC3 == 1){
+[; ;LedRotativo.c: 74: else if (PORTCbits.RC3 == 1){
 [e $ ! == -> . . _PORTCbits 0 3 `i -> 1 `i 163  ]
 {
-[; ;LedRotativo.c: 74: boton1 = 0;
-"74
-[e = _boton1 -> 0 `i ]
-[; ;LedRotativo.c: 75: boton2 = 0;
+[; ;LedRotativo.c: 75: boton1 = 0;
 "75
-[e = _boton2 -> 0 `i ]
-[; ;LedRotativo.c: 76: boton3 = 0;
+[e = _boton1 -> 0 `i ]
+[; ;LedRotativo.c: 76: boton2 = 0;
 "76
-[e = _boton3 -> 0 `i ]
-[; ;LedRotativo.c: 77: boton4 = 1;
+[e = _boton2 -> 0 `i ]
+[; ;LedRotativo.c: 77: boton3 = 0;
 "77
-[e = _boton4 -> 1 `i ]
+[e = _boton3 -> 0 `i ]
+[; ;LedRotativo.c: 78: boton4 = 1;
 "78
+[e = _boton4 -> 1 `i ]
+"79
 }
 [e :U 163 ]
-"80
+"81
 [e :U 162 ]
 [e :U 160 ]
 [e :U 158 ]
-[; ;LedRotativo.c: 78: }
-[; ;LedRotativo.c: 80: if (boton1 == 1)
+[; ;LedRotativo.c: 79: }
+[; ;LedRotativo.c: 81: if (boton1 == 1)
 [e $ ! == _boton1 -> 1 `i 164  ]
-[; ;LedRotativo.c: 81: bandera = 1;
-"81
+[; ;LedRotativo.c: 82: bandera = 1;
+"82
 [e = _bandera -> 1 `i ]
 [e $U 165  ]
-"82
-[e :U 164 ]
-[; ;LedRotativo.c: 82: else if (boton2 == 1)
-[e $ ! == _boton2 -> 1 `i 166  ]
-[; ;LedRotativo.c: 83: bandera = 2;
 "83
+[e :U 164 ]
+[; ;LedRotativo.c: 83: else if (boton2 == 1)
+[e $ ! == _boton2 -> 1 `i 166  ]
+[; ;LedRotativo.c: 84: bandera = 2;
+"84
 [e = _bandera -> 2 `i ]
 [e $U 167  ]
-"84
-[e :U 166 ]
-[; ;LedRotativo.c: 84: else if (boton3 == 1 )
-[e $ ! == _boton3 -> 1 `i 168  ]
-[; ;LedRotativo.c: 85: bandera = 3;
 "85
+[e :U 166 ]
+[; ;LedRotativo.c: 85: else if (boton3 == 1 )
+[e $ ! == _boton3 -> 1 `i 168  ]
+[; ;LedRotativo.c: 86: bandera = 3;
+"86
 [e = _bandera -> 3 `i ]
 [e $U 169  ]
-"86
-[e :U 168 ]
-[; ;LedRotativo.c: 86: else if (boton4 == 1)
-[e $ ! == _boton4 -> 1 `i 170  ]
-[; ;LedRotativo.c: 87: bandera = 4;
 "87
+[e :U 168 ]
+[; ;LedRotativo.c: 87: else if (boton4 == 1)
+[e $ ! == _boton4 -> 1 `i 170  ]
+[; ;LedRotativo.c: 88: bandera = 4;
+"88
 [e = _bandera -> 4 `i ]
 [e $U 171  ]
-"88
-[e :U 170 ]
-[; ;LedRotativo.c: 88: else
-[; ;LedRotativo.c: 89: bandera = 0;
 "89
+[e :U 170 ]
+[; ;LedRotativo.c: 89: else
+[; ;LedRotativo.c: 90: bandera = 0;
+"90
 [e = _bandera -> 0 `i ]
 [e :U 171 ]
 [e :U 169 ]
 [e :U 167 ]
 [e :U 165 ]
-[; ;LedRotativo.c: 90: }
-"90
+[; ;LedRotativo.c: 91: }
+"91
 [e :UE 156 ]
 }
-"91
+"92
 [v _Secuencia1 `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;LedRotativo.c: 91: void Secuencia1(int aux){
+[; ;LedRotativo.c: 92: void Secuencia1(int aux){
 [e :U _Secuencia1 ]
 [v _aux `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;LedRotativo.c: 92: PORTB = 0B00000001;
-"92
-[e = _PORTB -> -> 1 `i `uc ]
-[; ;LedRotativo.c: 93: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 93: PORTB = 0B00000001;
 "93
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _PORTB -> -> 1 `i `uc ]
+[; ;LedRotativo.c: 94: _delay((unsigned long)((500)*(4000000/4000.0)));
 "94
-[v _band `i ~T0 @X0 1 a ]
-[; ;LedRotativo.c: 94: int band = aux;
-[e = _band _aux ]
-[; ;LedRotativo.c: 95: cambio();
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "95
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 96: if(bandera != band)
+[v _band `i ~T0 @X0 1 a ]
+[; ;LedRotativo.c: 95: int band = aux;
+[e = _band _aux ]
+[; ;LedRotativo.c: 96: cambio();
 "96
-[e $ ! != _bandera _band 173  ]
-[; ;LedRotativo.c: 97: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 97: if(bandera != band)
 "97
+[e $ ! != _bandera _band 173  ]
+[; ;LedRotativo.c: 98: return;
+"98
 [e $UE 172  ]
 [e :U 173 ]
-[; ;LedRotativo.c: 98: PORTB = 0B00000010;
-"98
-[e = _PORTB -> -> 2 `i `uc ]
-[; ;LedRotativo.c: 99: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 99: PORTB = 0B00000010;
 "99
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 100: cambio();
+[e = _PORTB -> -> 2 `i `uc ]
+[; ;LedRotativo.c: 100: _delay((unsigned long)((500)*(4000000/4000.0)));
 "100
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 101: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 101: cambio();
 "101
-[e $ ! != _bandera _band 174  ]
-[; ;LedRotativo.c: 102: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 102: if(bandera != band)
 "102
+[e $ ! != _bandera _band 174  ]
+[; ;LedRotativo.c: 103: return;
+"103
 [e $UE 172  ]
 [e :U 174 ]
-[; ;LedRotativo.c: 103: PORTB = 0B00000100;
-"103
-[e = _PORTB -> -> 4 `i `uc ]
-[; ;LedRotativo.c: 104: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 104: PORTB = 0B00000100;
 "104
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 105: cambio();
+[e = _PORTB -> -> 4 `i `uc ]
+[; ;LedRotativo.c: 105: _delay((unsigned long)((500)*(4000000/4000.0)));
 "105
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 106: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 106: cambio();
 "106
-[e $ ! != _bandera _band 175  ]
-[; ;LedRotativo.c: 107: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 107: if(bandera != band)
 "107
+[e $ ! != _bandera _band 175  ]
+[; ;LedRotativo.c: 108: return;
+"108
 [e $UE 172  ]
 [e :U 175 ]
-[; ;LedRotativo.c: 108: PORTB = 0B00001000;
-"108
-[e = _PORTB -> -> 8 `i `uc ]
-[; ;LedRotativo.c: 109: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 109: PORTB = 0B00001000;
 "109
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 110: cambio();
+[e = _PORTB -> -> 8 `i `uc ]
+[; ;LedRotativo.c: 110: _delay((unsigned long)((500)*(4000000/4000.0)));
 "110
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 111: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 111: cambio();
 "111
-[e $ ! != _bandera _band 176  ]
-[; ;LedRotativo.c: 112: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 112: if(bandera != band)
 "112
+[e $ ! != _bandera _band 176  ]
+[; ;LedRotativo.c: 113: return;
+"113
 [e $UE 172  ]
 [e :U 176 ]
-[; ;LedRotativo.c: 113: PORTB = 0B00010000;
-"113
-[e = _PORTB -> -> 16 `i `uc ]
-[; ;LedRotativo.c: 114: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 114: PORTB = 0B00010000;
 "114
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 115: cambio();
+[e = _PORTB -> -> 16 `i `uc ]
+[; ;LedRotativo.c: 115: _delay((unsigned long)((500)*(4000000/4000.0)));
 "115
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 116: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 116: cambio();
 "116
-[e $ ! != _bandera _band 177  ]
-[; ;LedRotativo.c: 117: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 117: if(bandera != band)
 "117
+[e $ ! != _bandera _band 177  ]
+[; ;LedRotativo.c: 118: return;
+"118
 [e $UE 172  ]
 [e :U 177 ]
-[; ;LedRotativo.c: 118: PORTB = 0B00100000;
-"118
-[e = _PORTB -> -> 32 `i `uc ]
-[; ;LedRotativo.c: 119: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 119: PORTB = 0B00100000;
 "119
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 120: cambio();
+[e = _PORTB -> -> 32 `i `uc ]
+[; ;LedRotativo.c: 120: _delay((unsigned long)((500)*(4000000/4000.0)));
 "120
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 121: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 121: cambio();
 "121
-[e $ ! != _bandera _band 178  ]
-[; ;LedRotativo.c: 122: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 122: if(bandera != band)
 "122
+[e $ ! != _bandera _band 178  ]
+[; ;LedRotativo.c: 123: return;
+"123
 [e $UE 172  ]
 [e :U 178 ]
-[; ;LedRotativo.c: 123: PORTB = 0B01000000;
-"123
-[e = _PORTB -> -> 64 `i `uc ]
-[; ;LedRotativo.c: 124: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 124: PORTB = 0B01000000;
 "124
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 125: cambio();
+[e = _PORTB -> -> 64 `i `uc ]
+[; ;LedRotativo.c: 125: _delay((unsigned long)((500)*(4000000/4000.0)));
 "125
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 126: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 126: cambio();
 "126
-[e $ ! != _bandera _band 179  ]
-[; ;LedRotativo.c: 127: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 127: if(bandera != band)
 "127
+[e $ ! != _bandera _band 179  ]
+[; ;LedRotativo.c: 128: return;
+"128
 [e $UE 172  ]
 [e :U 179 ]
-[; ;LedRotativo.c: 128: PORTB = 0B10000000;
-"128
-[e = _PORTB -> -> 128 `i `uc ]
-[; ;LedRotativo.c: 129: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 129: PORTB = 0B10000000;
 "129
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 130: cambio();
+[e = _PORTB -> -> 128 `i `uc ]
+[; ;LedRotativo.c: 130: _delay((unsigned long)((500)*(4000000/4000.0)));
 "130
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 131: if(bandera != band)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 131: cambio();
 "131
-[e $ ! != _bandera _band 180  ]
-[; ;LedRotativo.c: 132: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 132: if(bandera != band)
 "132
+[e $ ! != _bandera _band 180  ]
+[; ;LedRotativo.c: 133: return;
+"133
 [e $UE 172  ]
 [e :U 180 ]
-[; ;LedRotativo.c: 133: }
-"133
+[; ;LedRotativo.c: 134: }
+"134
 [e :UE 172 ]
 }
-"135
+"136
 [v _Secuencia2 `(v ~T0 @X0 1 ef ]
 {
-[; ;LedRotativo.c: 135: void Secuencia2(){
+[; ;LedRotativo.c: 136: void Secuencia2(){
 [e :U _Secuencia2 ]
 [f ]
-[; ;LedRotativo.c: 136: PORTB = 0B10000001;
-"136
-[e = _PORTB -> -> 129 `i `uc ]
-[; ;LedRotativo.c: 137: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 137: PORTB = 0B10000001;
 "137
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 138: cambio();
+[e = _PORTB -> -> 129 `i `uc ]
+[; ;LedRotativo.c: 138: _delay((unsigned long)((500)*(4000000/4000.0)));
 "138
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 139: if(bandera != 2)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 139: cambio();
 "139
-[e $ ! != _bandera -> 2 `i 182  ]
-[; ;LedRotativo.c: 140: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 140: if(bandera != 2)
 "140
+[e $ ! != _bandera -> 2 `i 182  ]
+[; ;LedRotativo.c: 141: return;
+"141
 [e $UE 181  ]
 [e :U 182 ]
-[; ;LedRotativo.c: 141: PORTB = 0B01000010;
-"141
-[e = _PORTB -> -> 66 `i `uc ]
-[; ;LedRotativo.c: 142: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 142: PORTB = 0B01000010;
 "142
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 143: cambio();
+[e = _PORTB -> -> 66 `i `uc ]
+[; ;LedRotativo.c: 143: _delay((unsigned long)((500)*(4000000/4000.0)));
 "143
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 144: if(bandera != 2)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 144: cambio();
 "144
-[e $ ! != _bandera -> 2 `i 183  ]
-[; ;LedRotativo.c: 145: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 145: if(bandera != 2)
 "145
+[e $ ! != _bandera -> 2 `i 183  ]
+[; ;LedRotativo.c: 146: return;
+"146
 [e $UE 181  ]
 [e :U 183 ]
-[; ;LedRotativo.c: 146: PORTB = 0B00100100;
-"146
-[e = _PORTB -> -> 36 `i `uc ]
-[; ;LedRotativo.c: 147: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 147: PORTB = 0B00100100;
 "147
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 148: cambio();
+[e = _PORTB -> -> 36 `i `uc ]
+[; ;LedRotativo.c: 148: _delay((unsigned long)((500)*(4000000/4000.0)));
 "148
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 149: if(bandera != 2)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 149: cambio();
 "149
-[e $ ! != _bandera -> 2 `i 184  ]
-[; ;LedRotativo.c: 150: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 150: if(bandera != 2)
 "150
+[e $ ! != _bandera -> 2 `i 184  ]
+[; ;LedRotativo.c: 151: return;
+"151
 [e $UE 181  ]
 [e :U 184 ]
-[; ;LedRotativo.c: 151: PORTB = 0B00011000;
-"151
-[e = _PORTB -> -> 24 `i `uc ]
-[; ;LedRotativo.c: 152: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 152: PORTB = 0B00011000;
 "152
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 153: cambio();
+[e = _PORTB -> -> 24 `i `uc ]
+[; ;LedRotativo.c: 153: _delay((unsigned long)((500)*(4000000/4000.0)));
 "153
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 154: if(bandera != 2)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 154: cambio();
 "154
-[e $ ! != _bandera -> 2 `i 185  ]
-[; ;LedRotativo.c: 155: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 155: if(bandera != 2)
 "155
+[e $ ! != _bandera -> 2 `i 185  ]
+[; ;LedRotativo.c: 156: return;
+"156
 [e $UE 181  ]
 [e :U 185 ]
-[; ;LedRotativo.c: 157: }
-"157
+[; ;LedRotativo.c: 158: }
+"158
 [e :UE 181 ]
 }
-"159
+"160
 [v _Secuencia3 `(v ~T0 @X0 1 ef ]
 {
-[; ;LedRotativo.c: 159: void Secuencia3(){
+[; ;LedRotativo.c: 160: void Secuencia3(){
 [e :U _Secuencia3 ]
 [f ]
-[; ;LedRotativo.c: 160: PORTB = 0B00011000;
-"160
-[e = _PORTB -> -> 24 `i `uc ]
-[; ;LedRotativo.c: 161: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 161: PORTB = 0B00011000;
 "161
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 162: cambio();
+[e = _PORTB -> -> 24 `i `uc ]
+[; ;LedRotativo.c: 162: _delay((unsigned long)((500)*(4000000/4000.0)));
 "162
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 163: if(bandera != 3)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 163: cambio();
 "163
-[e $ ! != _bandera -> 3 `i 187  ]
-[; ;LedRotativo.c: 164: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 164: if(bandera != 3)
 "164
+[e $ ! != _bandera -> 3 `i 187  ]
+[; ;LedRotativo.c: 165: return;
+"165
 [e $UE 186  ]
 [e :U 187 ]
-[; ;LedRotativo.c: 165: PORTB = 0B00100100;
-"165
-[e = _PORTB -> -> 36 `i `uc ]
-[; ;LedRotativo.c: 166: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 166: PORTB = 0B00100100;
 "166
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 167: cambio();
+[e = _PORTB -> -> 36 `i `uc ]
+[; ;LedRotativo.c: 167: _delay((unsigned long)((500)*(4000000/4000.0)));
 "167
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 168: if(bandera != 3)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 168: cambio();
 "168
-[e $ ! != _bandera -> 3 `i 188  ]
-[; ;LedRotativo.c: 169: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 169: if(bandera != 3)
 "169
+[e $ ! != _bandera -> 3 `i 188  ]
+[; ;LedRotativo.c: 170: return;
+"170
 [e $UE 186  ]
 [e :U 188 ]
-[; ;LedRotativo.c: 170: PORTB = 0B01000010;
-"170
-[e = _PORTB -> -> 66 `i `uc ]
-[; ;LedRotativo.c: 171: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 171: PORTB = 0B01000010;
 "171
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 172: cambio();
+[e = _PORTB -> -> 66 `i `uc ]
+[; ;LedRotativo.c: 172: _delay((unsigned long)((500)*(4000000/4000.0)));
 "172
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 173: if(bandera != 3)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 173: cambio();
 "173
-[e $ ! != _bandera -> 3 `i 189  ]
-[; ;LedRotativo.c: 174: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 174: if(bandera != 3)
 "174
+[e $ ! != _bandera -> 3 `i 189  ]
+[; ;LedRotativo.c: 175: return;
+"175
 [e $UE 186  ]
 [e :U 189 ]
-[; ;LedRotativo.c: 175: PORTB = 0B10000001;
-"175
-[e = _PORTB -> -> 129 `i `uc ]
-[; ;LedRotativo.c: 176: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 176: PORTB = 0B10000001;
 "176
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 177: cambio();
+[e = _PORTB -> -> 129 `i `uc ]
+[; ;LedRotativo.c: 177: _delay((unsigned long)((500)*(4000000/4000.0)));
 "177
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 178: if(bandera != 3)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 178: cambio();
 "178
-[e $ ! != _bandera -> 3 `i 190  ]
-[; ;LedRotativo.c: 179: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 179: if(bandera != 3)
 "179
+[e $ ! != _bandera -> 3 `i 190  ]
+[; ;LedRotativo.c: 180: return;
+"180
 [e $UE 186  ]
 [e :U 190 ]
-[; ;LedRotativo.c: 181: }
-"181
+[; ;LedRotativo.c: 182: }
+"182
 [e :UE 186 ]
 }
-"183
+"184
 [v _Secuencia4 `(v ~T0 @X0 1 ef ]
 {
-[; ;LedRotativo.c: 183: void Secuencia4(){
+[; ;LedRotativo.c: 184: void Secuencia4(){
 [e :U _Secuencia4 ]
 [f ]
-[; ;LedRotativo.c: 184: PORTB = 0B10000000;
-"184
-[e = _PORTB -> -> 128 `i `uc ]
-[; ;LedRotativo.c: 185: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 185: PORTB = 0B10000000;
 "185
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 186: cambio();
+[e = _PORTB -> -> 128 `i `uc ]
+[; ;LedRotativo.c: 186: _delay((unsigned long)((500)*(4000000/4000.0)));
 "186
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 187: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 187: cambio();
 "187
-[e $ ! != _bandera -> 4 `i 192  ]
-[; ;LedRotativo.c: 188: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 188: if(bandera != 4)
 "188
+[e $ ! != _bandera -> 4 `i 192  ]
+[; ;LedRotativo.c: 189: return;
+"189
 [e $UE 191  ]
 [e :U 192 ]
-[; ;LedRotativo.c: 189: PORTB = 0B11000000;
-"189
-[e = _PORTB -> -> 192 `i `uc ]
-[; ;LedRotativo.c: 190: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 190: PORTB = 0B11000000;
 "190
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 191: cambio();
+[e = _PORTB -> -> 192 `i `uc ]
+[; ;LedRotativo.c: 191: _delay((unsigned long)((500)*(4000000/4000.0)));
 "191
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 192: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 192: cambio();
 "192
-[e $ ! != _bandera -> 4 `i 193  ]
-[; ;LedRotativo.c: 193: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 193: if(bandera != 4)
 "193
+[e $ ! != _bandera -> 4 `i 193  ]
+[; ;LedRotativo.c: 194: return;
+"194
 [e $UE 191  ]
 [e :U 193 ]
-[; ;LedRotativo.c: 194: PORTB = 0B11100000;
-"194
-[e = _PORTB -> -> 224 `i `uc ]
-[; ;LedRotativo.c: 195: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 195: PORTB = 0B11100000;
 "195
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 196: cambio();
+[e = _PORTB -> -> 224 `i `uc ]
+[; ;LedRotativo.c: 196: _delay((unsigned long)((500)*(4000000/4000.0)));
 "196
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 197: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 197: cambio();
 "197
-[e $ ! != _bandera -> 4 `i 194  ]
-[; ;LedRotativo.c: 198: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 198: if(bandera != 4)
 "198
+[e $ ! != _bandera -> 4 `i 194  ]
+[; ;LedRotativo.c: 199: return;
+"199
 [e $UE 191  ]
 [e :U 194 ]
-[; ;LedRotativo.c: 199: PORTB = 0B11110000;
-"199
-[e = _PORTB -> -> 240 `i `uc ]
-[; ;LedRotativo.c: 200: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 200: PORTB = 0B11110000;
 "200
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 201: cambio();
+[e = _PORTB -> -> 240 `i `uc ]
+[; ;LedRotativo.c: 201: _delay((unsigned long)((500)*(4000000/4000.0)));
 "201
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 202: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 202: cambio();
 "202
-[e $ ! != _bandera -> 4 `i 195  ]
-[; ;LedRotativo.c: 203: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 203: if(bandera != 4)
 "203
+[e $ ! != _bandera -> 4 `i 195  ]
+[; ;LedRotativo.c: 204: return;
+"204
 [e $UE 191  ]
 [e :U 195 ]
-[; ;LedRotativo.c: 204: PORTB = 0B11111000;
-"204
-[e = _PORTB -> -> 248 `i `uc ]
-[; ;LedRotativo.c: 205: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 205: PORTB = 0B11111000;
 "205
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 206: cambio();
+[e = _PORTB -> -> 248 `i `uc ]
+[; ;LedRotativo.c: 206: _delay((unsigned long)((500)*(4000000/4000.0)));
 "206
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 207: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 207: cambio();
 "207
-[e $ ! != _bandera -> 4 `i 196  ]
-[; ;LedRotativo.c: 208: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 208: if(bandera != 4)
 "208
+[e $ ! != _bandera -> 4 `i 196  ]
+[; ;LedRotativo.c: 209: return;
+"209
 [e $UE 191  ]
 [e :U 196 ]
-[; ;LedRotativo.c: 209: PORTB = 0B11111100;
-"209
-[e = _PORTB -> -> 252 `i `uc ]
-[; ;LedRotativo.c: 210: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 210: PORTB = 0B11111100;
 "210
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 211: cambio();
+[e = _PORTB -> -> 252 `i `uc ]
+[; ;LedRotativo.c: 211: _delay((unsigned long)((500)*(4000000/4000.0)));
 "211
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 212: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 212: cambio();
 "212
-[e $ ! != _bandera -> 4 `i 197  ]
-[; ;LedRotativo.c: 213: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 213: if(bandera != 4)
 "213
+[e $ ! != _bandera -> 4 `i 197  ]
+[; ;LedRotativo.c: 214: return;
+"214
 [e $UE 191  ]
 [e :U 197 ]
-[; ;LedRotativo.c: 214: PORTB = 0B11111110;
-"214
-[e = _PORTB -> -> 254 `i `uc ]
-[; ;LedRotativo.c: 215: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 215: PORTB = 0B11111110;
 "215
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 216: cambio();
+[e = _PORTB -> -> 254 `i `uc ]
+[; ;LedRotativo.c: 216: _delay((unsigned long)((500)*(4000000/4000.0)));
 "216
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 217: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 217: cambio();
 "217
-[e $ ! != _bandera -> 4 `i 198  ]
-[; ;LedRotativo.c: 218: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 218: if(bandera != 4)
 "218
+[e $ ! != _bandera -> 4 `i 198  ]
+[; ;LedRotativo.c: 219: return;
+"219
 [e $UE 191  ]
 [e :U 198 ]
-[; ;LedRotativo.c: 219: PORTB = 0B11111111;
-"219
-[e = _PORTB -> -> 255 `i `uc ]
-[; ;LedRotativo.c: 220: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 220: PORTB = 0B11111111;
 "220
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 221: cambio();
+[e = _PORTB -> -> 255 `i `uc ]
+[; ;LedRotativo.c: 221: _delay((unsigned long)((500)*(4000000/4000.0)));
 "221
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 222: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 222: cambio();
 "222
-[e $ ! != _bandera -> 4 `i 199  ]
-[; ;LedRotativo.c: 223: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 223: if(bandera != 4)
 "223
+[e $ ! != _bandera -> 4 `i 199  ]
+[; ;LedRotativo.c: 224: return;
+"224
 [e $UE 191  ]
 [e :U 199 ]
-[; ;LedRotativo.c: 224: PORTB = 0B00000000;
-"224
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;LedRotativo.c: 225: _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;LedRotativo.c: 225: PORTB = 0B00000000;
 "225
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;LedRotativo.c: 226: cambio();
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;LedRotativo.c: 226: _delay((unsigned long)((500)*(4000000/4000.0)));
 "226
-[e ( _cambio ..  ]
-[; ;LedRotativo.c: 227: if(bandera != 4)
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;LedRotativo.c: 227: cambio();
 "227
-[e $ ! != _bandera -> 4 `i 200  ]
-[; ;LedRotativo.c: 228: return;
+[e ( _cambio ..  ]
+[; ;LedRotativo.c: 228: if(bandera != 4)
 "228
+[e $ ! != _bandera -> 4 `i 200  ]
+[; ;LedRotativo.c: 229: return;
+"229
 [e $UE 191  ]
 [e :U 200 ]
-[; ;LedRotativo.c: 229: }
-"229
+[; ;LedRotativo.c: 230: }
+"230
 [e :UE 191 ]
 }

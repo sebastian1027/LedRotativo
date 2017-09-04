@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.43 build -156212558 
-                                                                                               Sat Sep 02 22:45:36 2017
+                                                                                               Sun Sep 03 20:57:20 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
      1                           	processor	16F887
@@ -247,7 +247,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    233 ;;
    234 ;; *************** function _main *****************
    235 ;; Defined at:
-   236 ;;		line 30 in file "LedRotativo.c"
+   236 ;;		line 31 in file "LedRotativo.c"
    237 ;; Parameters:    Size  Location     Type
    238 ;;		None
    239 ;; Auto vars:     Size  Location     Type
@@ -282,7 +282,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    268                           ;psect for function _main
    269  04AA                     _main:	
    270                           
-   271                           ;LedRotativo.c: 31: TRISB = 0;
+   271                           ;LedRotativo.c: 32: TRISB = 0;
    272                           
    273                           ;incstack = 0
    274                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
@@ -290,49 +290,49 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    276  04AB  1303               	bcf	3,6	;RP1=0, select bank1
    277  04AC  0186               	clrf	6	;volatile
    278                           
-   279                           ;LedRotativo.c: 32: PORTB = 0;
+   279                           ;LedRotativo.c: 33: PORTB = 0;
    280  04AD  1283               	bcf	3,5	;RP0=0, select bank0
    281  04AE  1303               	bcf	3,6	;RP1=0, select bank0
    282  04AF  0186               	clrf	6	;volatile
    283                           
-   284                           ;LedRotativo.c: 33: TRISC = 0b11111111;
+   284                           ;LedRotativo.c: 34: TRISC = 0b11111111;
    285  04B0  30FF               	movlw	255
    286  04B1  1683               	bsf	3,5	;RP0=1, select bank1
    287  04B2  1303               	bcf	3,6	;RP1=0, select bank1
    288  04B3  0087               	movwf	7	;volatile
    289                           
-   290                           ;LedRotativo.c: 34: PORTC = 0;
+   290                           ;LedRotativo.c: 35: PORTC = 0;
    291  04B4  1283               	bcf	3,5	;RP0=0, select bank0
    292  04B5  1303               	bcf	3,6	;RP1=0, select bank0
    293  04B6  0187               	clrf	7	;volatile
    294  04B7                     l1114:	
-   295                           ;LedRotativo.c: 35: while (1){
+   295                           ;LedRotativo.c: 36: while (1){
    296                           
    297                           
-   298                           ;LedRotativo.c: 36: if(bandera == 0){
+   298                           ;LedRotativo.c: 37: if(bandera == 0){
    299  04B7  0877               	movf	_bandera,w
    300  04B8  0478               	iorwf	_bandera+1,w
    301  04B9  1D03               	btfss	3,2
    302  04BA  2CC3               	goto	l55
    303                           
-   304                           ;LedRotativo.c: 37: Secuencia1(0);
+   304                           ;LedRotativo.c: 38: Secuencia1(0);
    305  04BB  3000               	movlw	0
    306  04BC  00F0               	movwf	Secuencia1@aux
    307  04BD  00F1               	movwf	Secuencia1@aux+1
    308  04BE  120A  118A  2619  120A  118A  	fcall	_Secuencia1
    309  04C3                     l55:	
    310                           
-   311                           ;LedRotativo.c: 38: }
-   312                           ;LedRotativo.c: 39: cambio();
+   311                           ;LedRotativo.c: 39: }
+   312                           ;LedRotativo.c: 40: cambio();
    313  04C3  120A  118A  24F7  120A  118A  	fcall	_cambio
    314                           
-   315                           ;LedRotativo.c: 40: if (bandera == 1)
+   315                           ;LedRotativo.c: 41: if (bandera == 1)
    316  04C8  0377               	decf	_bandera,w
    317  04C9  0478               	iorwf	_bandera+1,w
    318  04CA  1D03               	btfss	3,2
    319  04CB  2CD6               	goto	l1122
    320                           
-   321                           ;LedRotativo.c: 41: Secuencia1(1);
+   321                           ;LedRotativo.c: 42: Secuencia1(1);
    322  04CC  3001               	movlw	1
    323  04CD  00F0               	movwf	Secuencia1@aux
    324  04CE  3000               	movlw	0
@@ -341,38 +341,38 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    327  04D5  2CB7               	goto	l1114
    328  04D6                     l1122:	
    329                           
-   330                           ;LedRotativo.c: 42: else if(bandera ==2)
+   330                           ;LedRotativo.c: 43: else if(bandera ==2)
    331  04D6  3002               	movlw	2
    332  04D7  0677               	xorwf	_bandera,w
    333  04D8  0478               	iorwf	_bandera+1,w
    334  04D9  1D03               	btfss	3,2
    335  04DA  2CE1               	goto	l1126
    336                           
-   337                           ;LedRotativo.c: 43: Secuencia2();
+   337                           ;LedRotativo.c: 44: Secuencia2();
    338  04DB  120A  118A  254D  120A  118A  	fcall	_Secuencia2
    339  04E0  2CB7               	goto	l1114
    340  04E1                     l1126:	
    341                           
-   342                           ;LedRotativo.c: 44: else if(bandera ==3)
+   342                           ;LedRotativo.c: 45: else if(bandera ==3)
    343  04E1  3003               	movlw	3
    344  04E2  0677               	xorwf	_bandera,w
    345  04E3  0478               	iorwf	_bandera+1,w
    346  04E4  1D03               	btfss	3,2
    347  04E5  2CEC               	goto	l1130
    348                           
-   349                           ;LedRotativo.c: 45: Secuencia3();
+   349                           ;LedRotativo.c: 46: Secuencia3();
    350  04E6  120A  118A  25B3  120A  118A  	fcall	_Secuencia3
    351  04EB  2CB7               	goto	l1114
    352  04EC                     l1130:	
    353                           
-   354                           ;LedRotativo.c: 46: else if(bandera ==4)
+   354                           ;LedRotativo.c: 47: else if(bandera ==4)
    355  04EC  3004               	movlw	4
    356  04ED  0677               	xorwf	_bandera,w
    357  04EE  0478               	iorwf	_bandera+1,w
    358  04EF  1D03               	btfss	3,2
    359  04F0  2CB7               	goto	l1114
    360                           
-   361                           ;LedRotativo.c: 47: Secuencia4();
+   361                           ;LedRotativo.c: 48: Secuencia4();
    362  04F1  120A  118A  2704  120A  118A  	fcall	_Secuencia4
    363  04F6  2CB7               	goto	l1114
    364  04F7                     __end_of_main:	
@@ -381,7 +381,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    367  0704                     __ptext1:	
    368 ;; *************** function _Secuencia4 *****************
    369 ;; Defined at:
-   370 ;;		line 183 in file "LedRotativo.c"
+   370 ;;		line 184 in file "LedRotativo.c"
    371 ;; Parameters:    Size  Location     Type
    372 ;;		None
    373 ;; Auto vars:     Size  Location     Type
@@ -413,7 +413,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    399                           ;psect for function _Secuencia4
    400  0704                     _Secuencia4:	
    401                           
-   402                           ;LedRotativo.c: 184: PORTB = 0B10000000;
+   402                           ;LedRotativo.c: 185: PORTB = 0B10000000;
    403                           
    404                           ;incstack = 0
    405                           ; Regs used in _Secuencia4: [wreg+status,2+status,0+pclath+cstack]
@@ -422,7 +422,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    408  0706  1303               	bcf	3,6	;RP1=0, select bank0
    409  0707  0086               	movwf	6	;volatile
    410                           
-   411                           ;LedRotativo.c: 185: _delay((unsigned long)((500)*(4000000/4000.0)));
+   411                           ;LedRotativo.c: 186: _delay((unsigned long)((500)*(4000000/4000.0)));
    412  0708  3003               	movlw	3
    413  0709  00F2               	movwf	??_Secuencia4+2
    414  070A  308A               	movlw	138
@@ -438,25 +438,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    424  0713  2F0E               	goto	u707
    425  0714  2F15               	nop2
    426                           
-   427                           ;LedRotativo.c: 186: cambio();
+   427                           ;LedRotativo.c: 187: cambio();
    428  0715  120A  118A  24F7  120A  118A  	fcall	_cambio
    429                           
-   430                           ;LedRotativo.c: 187: if(bandera != 4)
+   430                           ;LedRotativo.c: 188: if(bandera != 4)
    431  071A  3004               	movlw	4
    432  071B  0677               	xorwf	_bandera,w
    433  071C  0478               	iorwf	_bandera+1,w
    434  071D  1D03               	btfss	3,2
    435  071E  0008               	return
    436                           
-   437                           ;LedRotativo.c: 189: PORTB = 0B11000000;
+   437                           ;LedRotativo.c: 190: PORTB = 0B11000000;
    438                           
-   439                           ;LedRotativo.c: 188: return;
+   439                           ;LedRotativo.c: 189: return;
    440  071F  30C0               	movlw	192
    441  0720  1283               	bcf	3,5	;RP0=0, select bank0
    442  0721  1303               	bcf	3,6	;RP1=0, select bank0
    443  0722  0086               	movwf	6	;volatile
    444                           
-   445                           ;LedRotativo.c: 190: _delay((unsigned long)((500)*(4000000/4000.0)));
+   445                           ;LedRotativo.c: 191: _delay((unsigned long)((500)*(4000000/4000.0)));
    446  0723  3003               	movlw	3
    447  0724  00F2               	movwf	??_Secuencia4+2
    448  0725  308A               	movlw	138
@@ -472,25 +472,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    458  072E  2F29               	goto	u717
    459  072F  2F30               	nop2
    460                           
-   461                           ;LedRotativo.c: 191: cambio();
+   461                           ;LedRotativo.c: 192: cambio();
    462  0730  120A  118A  24F7  120A  118A  	fcall	_cambio
    463                           
-   464                           ;LedRotativo.c: 192: if(bandera != 4)
+   464                           ;LedRotativo.c: 193: if(bandera != 4)
    465  0735  3004               	movlw	4
    466  0736  0677               	xorwf	_bandera,w
    467  0737  0478               	iorwf	_bandera+1,w
    468  0738  1D03               	btfss	3,2
    469  0739  0008               	return
    470                           
-   471                           ;LedRotativo.c: 194: PORTB = 0B11100000;
+   471                           ;LedRotativo.c: 195: PORTB = 0B11100000;
    472                           
-   473                           ;LedRotativo.c: 193: return;
+   473                           ;LedRotativo.c: 194: return;
    474  073A  30E0               	movlw	224
    475  073B  1283               	bcf	3,5	;RP0=0, select bank0
    476  073C  1303               	bcf	3,6	;RP1=0, select bank0
    477  073D  0086               	movwf	6	;volatile
    478                           
-   479                           ;LedRotativo.c: 195: _delay((unsigned long)((500)*(4000000/4000.0)));
+   479                           ;LedRotativo.c: 196: _delay((unsigned long)((500)*(4000000/4000.0)));
    480  073E  3003               	movlw	3
    481  073F  00F2               	movwf	??_Secuencia4+2
    482  0740  308A               	movlw	138
@@ -506,25 +506,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    492  0749  2F44               	goto	u727
    493  074A  2F4B               	nop2
    494                           
-   495                           ;LedRotativo.c: 196: cambio();
+   495                           ;LedRotativo.c: 197: cambio();
    496  074B  120A  118A  24F7  120A  118A  	fcall	_cambio
    497                           
-   498                           ;LedRotativo.c: 197: if(bandera != 4)
+   498                           ;LedRotativo.c: 198: if(bandera != 4)
    499  0750  3004               	movlw	4
    500  0751  0677               	xorwf	_bandera,w
    501  0752  0478               	iorwf	_bandera+1,w
    502  0753  1D03               	btfss	3,2
    503  0754  0008               	return
    504                           
-   505                           ;LedRotativo.c: 199: PORTB = 0B11110000;
+   505                           ;LedRotativo.c: 200: PORTB = 0B11110000;
    506                           
-   507                           ;LedRotativo.c: 198: return;
+   507                           ;LedRotativo.c: 199: return;
    508  0755  30F0               	movlw	240
    509  0756  1283               	bcf	3,5	;RP0=0, select bank0
    510  0757  1303               	bcf	3,6	;RP1=0, select bank0
    511  0758  0086               	movwf	6	;volatile
    512                           
-   513                           ;LedRotativo.c: 200: _delay((unsigned long)((500)*(4000000/4000.0)));
+   513                           ;LedRotativo.c: 201: _delay((unsigned long)((500)*(4000000/4000.0)));
    514  0759  3003               	movlw	3
    515  075A  00F2               	movwf	??_Secuencia4+2
    516  075B  308A               	movlw	138
@@ -540,25 +540,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    526  0764  2F5F               	goto	u737
    527  0765  2F66               	nop2
    528                           
-   529                           ;LedRotativo.c: 201: cambio();
+   529                           ;LedRotativo.c: 202: cambio();
    530  0766  120A  118A  24F7  120A  118A  	fcall	_cambio
    531                           
-   532                           ;LedRotativo.c: 202: if(bandera != 4)
+   532                           ;LedRotativo.c: 203: if(bandera != 4)
    533  076B  3004               	movlw	4
    534  076C  0677               	xorwf	_bandera,w
    535  076D  0478               	iorwf	_bandera+1,w
    536  076E  1D03               	btfss	3,2
    537  076F  0008               	return
    538                           
-   539                           ;LedRotativo.c: 204: PORTB = 0B11111000;
+   539                           ;LedRotativo.c: 205: PORTB = 0B11111000;
    540                           
-   541                           ;LedRotativo.c: 203: return;
+   541                           ;LedRotativo.c: 204: return;
    542  0770  30F8               	movlw	248
    543  0771  1283               	bcf	3,5	;RP0=0, select bank0
    544  0772  1303               	bcf	3,6	;RP1=0, select bank0
    545  0773  0086               	movwf	6	;volatile
    546                           
-   547                           ;LedRotativo.c: 205: _delay((unsigned long)((500)*(4000000/4000.0)));
+   547                           ;LedRotativo.c: 206: _delay((unsigned long)((500)*(4000000/4000.0)));
    548  0774  3003               	movlw	3
    549  0775  00F2               	movwf	??_Secuencia4+2
    550  0776  308A               	movlw	138
@@ -574,25 +574,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    560  077F  2F7A               	goto	u747
    561  0780  2F81               	nop2
    562                           
-   563                           ;LedRotativo.c: 206: cambio();
+   563                           ;LedRotativo.c: 207: cambio();
    564  0781  120A  118A  24F7  120A  118A  	fcall	_cambio
    565                           
-   566                           ;LedRotativo.c: 207: if(bandera != 4)
+   566                           ;LedRotativo.c: 208: if(bandera != 4)
    567  0786  3004               	movlw	4
    568  0787  0677               	xorwf	_bandera,w
    569  0788  0478               	iorwf	_bandera+1,w
    570  0789  1D03               	btfss	3,2
    571  078A  0008               	return
    572                           
-   573                           ;LedRotativo.c: 209: PORTB = 0B11111100;
+   573                           ;LedRotativo.c: 210: PORTB = 0B11111100;
    574                           
-   575                           ;LedRotativo.c: 208: return;
+   575                           ;LedRotativo.c: 209: return;
    576  078B  30FC               	movlw	252
    577  078C  1283               	bcf	3,5	;RP0=0, select bank0
    578  078D  1303               	bcf	3,6	;RP1=0, select bank0
    579  078E  0086               	movwf	6	;volatile
    580                           
-   581                           ;LedRotativo.c: 210: _delay((unsigned long)((500)*(4000000/4000.0)));
+   581                           ;LedRotativo.c: 211: _delay((unsigned long)((500)*(4000000/4000.0)));
    582  078F  3003               	movlw	3
    583  0790  00F2               	movwf	??_Secuencia4+2
    584  0791  308A               	movlw	138
@@ -608,25 +608,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    594  079A  2F95               	goto	u757
    595  079B  2F9C               	nop2
    596                           
-   597                           ;LedRotativo.c: 211: cambio();
+   597                           ;LedRotativo.c: 212: cambio();
    598  079C  120A  118A  24F7  120A  118A  	fcall	_cambio
    599                           
-   600                           ;LedRotativo.c: 212: if(bandera != 4)
+   600                           ;LedRotativo.c: 213: if(bandera != 4)
    601  07A1  3004               	movlw	4
    602  07A2  0677               	xorwf	_bandera,w
    603  07A3  0478               	iorwf	_bandera+1,w
    604  07A4  1D03               	btfss	3,2
    605  07A5  0008               	return
    606                           
-   607                           ;LedRotativo.c: 214: PORTB = 0B11111110;
+   607                           ;LedRotativo.c: 215: PORTB = 0B11111110;
    608                           
-   609                           ;LedRotativo.c: 213: return;
+   609                           ;LedRotativo.c: 214: return;
    610  07A6  30FE               	movlw	254
    611  07A7  1283               	bcf	3,5	;RP0=0, select bank0
    612  07A8  1303               	bcf	3,6	;RP1=0, select bank0
    613  07A9  0086               	movwf	6	;volatile
    614                           
-   615                           ;LedRotativo.c: 215: _delay((unsigned long)((500)*(4000000/4000.0)));
+   615                           ;LedRotativo.c: 216: _delay((unsigned long)((500)*(4000000/4000.0)));
    616  07AA  3003               	movlw	3
    617  07AB  00F2               	movwf	??_Secuencia4+2
    618  07AC  308A               	movlw	138
@@ -642,25 +642,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    628  07B5  2FB0               	goto	u767
    629  07B6  2FB7               	nop2
    630                           
-   631                           ;LedRotativo.c: 216: cambio();
+   631                           ;LedRotativo.c: 217: cambio();
    632  07B7  120A  118A  24F7  120A  118A  	fcall	_cambio
    633                           
-   634                           ;LedRotativo.c: 217: if(bandera != 4)
+   634                           ;LedRotativo.c: 218: if(bandera != 4)
    635  07BC  3004               	movlw	4
    636  07BD  0677               	xorwf	_bandera,w
    637  07BE  0478               	iorwf	_bandera+1,w
    638  07BF  1D03               	btfss	3,2
    639  07C0  0008               	return
    640                           
-   641                           ;LedRotativo.c: 219: PORTB = 0B11111111;
+   641                           ;LedRotativo.c: 220: PORTB = 0B11111111;
    642                           
-   643                           ;LedRotativo.c: 218: return;
+   643                           ;LedRotativo.c: 219: return;
    644  07C1  30FF               	movlw	255
    645  07C2  1283               	bcf	3,5	;RP0=0, select bank0
    646  07C3  1303               	bcf	3,6	;RP1=0, select bank0
    647  07C4  0086               	movwf	6	;volatile
    648                           
-   649                           ;LedRotativo.c: 220: _delay((unsigned long)((500)*(4000000/4000.0)));
+   649                           ;LedRotativo.c: 221: _delay((unsigned long)((500)*(4000000/4000.0)));
    650  07C5  3003               	movlw	3
    651  07C6  00F2               	movwf	??_Secuencia4+2
    652  07C7  308A               	movlw	138
@@ -676,24 +676,24 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    662  07D0  2FCB               	goto	u777
    663  07D1  2FD2               	nop2
    664                           
-   665                           ;LedRotativo.c: 221: cambio();
+   665                           ;LedRotativo.c: 222: cambio();
    666  07D2  120A  118A  24F7  120A  118A  	fcall	_cambio
    667                           
-   668                           ;LedRotativo.c: 222: if(bandera != 4)
+   668                           ;LedRotativo.c: 223: if(bandera != 4)
    669  07D7  3004               	movlw	4
    670  07D8  0677               	xorwf	_bandera,w
    671  07D9  0478               	iorwf	_bandera+1,w
    672  07DA  1D03               	btfss	3,2
    673  07DB  0008               	return
    674                           
-   675                           ;LedRotativo.c: 224: PORTB = 0B00000000;
+   675                           ;LedRotativo.c: 225: PORTB = 0B00000000;
    676                           
-   677                           ;LedRotativo.c: 223: return;
+   677                           ;LedRotativo.c: 224: return;
    678  07DC  1283               	bcf	3,5	;RP0=0, select bank0
    679  07DD  1303               	bcf	3,6	;RP1=0, select bank0
    680  07DE  0186               	clrf	6	;volatile
    681                           
-   682                           ;LedRotativo.c: 225: _delay((unsigned long)((500)*(4000000/4000.0)));
+   682                           ;LedRotativo.c: 226: _delay((unsigned long)((500)*(4000000/4000.0)));
    683  07DF  3003               	movlw	3
    684  07E0  00F2               	movwf	??_Secuencia4+2
    685  07E1  308A               	movlw	138
@@ -709,10 +709,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    695  07EA  2FE5               	goto	u787
    696  07EB  2FEC               	nop2
    697                           
-   698                           ;LedRotativo.c: 226: cambio();
+   698                           ;LedRotativo.c: 227: cambio();
    699  07EC  120A  118A  24F7   	fcall	_cambio
    700                           
-   701                           ;LedRotativo.c: 228: return;
+   701                           ;LedRotativo.c: 229: return;
    702  07EF  0008               	return
    703  07F0                     __end_of_Secuencia4:	
    704                           
@@ -720,7 +720,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    706  05B3                     __ptext2:	
    707 ;; *************** function _Secuencia3 *****************
    708 ;; Defined at:
-   709 ;;		line 159 in file "LedRotativo.c"
+   709 ;;		line 160 in file "LedRotativo.c"
    710 ;; Parameters:    Size  Location     Type
    711 ;;		None
    712 ;; Auto vars:     Size  Location     Type
@@ -752,7 +752,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    738                           ;psect for function _Secuencia3
    739  05B3                     _Secuencia3:	
    740                           
-   741                           ;LedRotativo.c: 160: PORTB = 0B00011000;
+   741                           ;LedRotativo.c: 161: PORTB = 0B00011000;
    742                           
    743                           ;incstack = 0
    744                           ; Regs used in _Secuencia3: [wreg+status,2+status,0+pclath+cstack]
@@ -761,7 +761,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    747  05B5  1303               	bcf	3,6	;RP1=0, select bank0
    748  05B6  0086               	movwf	6	;volatile
    749                           
-   750                           ;LedRotativo.c: 161: _delay((unsigned long)((500)*(4000000/4000.0)));
+   750                           ;LedRotativo.c: 162: _delay((unsigned long)((500)*(4000000/4000.0)));
    751  05B7  3003               	movlw	3
    752  05B8  00F2               	movwf	??_Secuencia3+2
    753  05B9  308A               	movlw	138
@@ -777,25 +777,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    763  05C2  2DBD               	goto	u797
    764  05C3  2DC4               	nop2
    765                           
-   766                           ;LedRotativo.c: 162: cambio();
+   766                           ;LedRotativo.c: 163: cambio();
    767  05C4  120A  118A  24F7  120A  118A  	fcall	_cambio
    768                           
-   769                           ;LedRotativo.c: 163: if(bandera != 3)
+   769                           ;LedRotativo.c: 164: if(bandera != 3)
    770  05C9  3003               	movlw	3
    771  05CA  0677               	xorwf	_bandera,w
    772  05CB  0478               	iorwf	_bandera+1,w
    773  05CC  1D03               	btfss	3,2
    774  05CD  0008               	return
    775                           
-   776                           ;LedRotativo.c: 165: PORTB = 0B00100100;
+   776                           ;LedRotativo.c: 166: PORTB = 0B00100100;
    777                           
-   778                           ;LedRotativo.c: 164: return;
+   778                           ;LedRotativo.c: 165: return;
    779  05CE  3024               	movlw	36
    780  05CF  1283               	bcf	3,5	;RP0=0, select bank0
    781  05D0  1303               	bcf	3,6	;RP1=0, select bank0
    782  05D1  0086               	movwf	6	;volatile
    783                           
-   784                           ;LedRotativo.c: 166: _delay((unsigned long)((500)*(4000000/4000.0)));
+   784                           ;LedRotativo.c: 167: _delay((unsigned long)((500)*(4000000/4000.0)));
    785  05D2  3003               	movlw	3
    786  05D3  00F2               	movwf	??_Secuencia3+2
    787  05D4  308A               	movlw	138
@@ -811,25 +811,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    797  05DD  2DD8               	goto	u807
    798  05DE  2DDF               	nop2
    799                           
-   800                           ;LedRotativo.c: 167: cambio();
+   800                           ;LedRotativo.c: 168: cambio();
    801  05DF  120A  118A  24F7  120A  118A  	fcall	_cambio
    802                           
-   803                           ;LedRotativo.c: 168: if(bandera != 3)
+   803                           ;LedRotativo.c: 169: if(bandera != 3)
    804  05E4  3003               	movlw	3
    805  05E5  0677               	xorwf	_bandera,w
    806  05E6  0478               	iorwf	_bandera+1,w
    807  05E7  1D03               	btfss	3,2
    808  05E8  0008               	return
    809                           
-   810                           ;LedRotativo.c: 170: PORTB = 0B01000010;
+   810                           ;LedRotativo.c: 171: PORTB = 0B01000010;
    811                           
-   812                           ;LedRotativo.c: 169: return;
+   812                           ;LedRotativo.c: 170: return;
    813  05E9  3042               	movlw	66
    814  05EA  1283               	bcf	3,5	;RP0=0, select bank0
    815  05EB  1303               	bcf	3,6	;RP1=0, select bank0
    816  05EC  0086               	movwf	6	;volatile
    817                           
-   818                           ;LedRotativo.c: 171: _delay((unsigned long)((500)*(4000000/4000.0)));
+   818                           ;LedRotativo.c: 172: _delay((unsigned long)((500)*(4000000/4000.0)));
    819  05ED  3003               	movlw	3
    820  05EE  00F2               	movwf	??_Secuencia3+2
    821  05EF  308A               	movlw	138
@@ -845,25 +845,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    831  05F8  2DF3               	goto	u817
    832  05F9  2DFA               	nop2
    833                           
-   834                           ;LedRotativo.c: 172: cambio();
+   834                           ;LedRotativo.c: 173: cambio();
    835  05FA  120A  118A  24F7  120A  118A  	fcall	_cambio
    836                           
-   837                           ;LedRotativo.c: 173: if(bandera != 3)
+   837                           ;LedRotativo.c: 174: if(bandera != 3)
    838  05FF  3003               	movlw	3
    839  0600  0677               	xorwf	_bandera,w
    840  0601  0478               	iorwf	_bandera+1,w
    841  0602  1D03               	btfss	3,2
    842  0603  0008               	return
    843                           
-   844                           ;LedRotativo.c: 175: PORTB = 0B10000001;
+   844                           ;LedRotativo.c: 176: PORTB = 0B10000001;
    845                           
-   846                           ;LedRotativo.c: 174: return;
+   846                           ;LedRotativo.c: 175: return;
    847  0604  3081               	movlw	129
    848  0605  1283               	bcf	3,5	;RP0=0, select bank0
    849  0606  1303               	bcf	3,6	;RP1=0, select bank0
    850  0607  0086               	movwf	6	;volatile
    851                           
-   852                           ;LedRotativo.c: 176: _delay((unsigned long)((500)*(4000000/4000.0)));
+   852                           ;LedRotativo.c: 177: _delay((unsigned long)((500)*(4000000/4000.0)));
    853  0608  3003               	movlw	3
    854  0609  00F2               	movwf	??_Secuencia3+2
    855  060A  308A               	movlw	138
@@ -879,10 +879,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    865  0613  2E0E               	goto	u827
    866  0614  2E15               	nop2
    867                           
-   868                           ;LedRotativo.c: 177: cambio();
+   868                           ;LedRotativo.c: 178: cambio();
    869  0615  120A  118A  24F7   	fcall	_cambio
    870                           
-   871                           ;LedRotativo.c: 179: return;
+   871                           ;LedRotativo.c: 180: return;
    872  0618  0008               	return
    873  0619                     __end_of_Secuencia3:	
    874                           
@@ -890,7 +890,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    876  054D                     __ptext3:	
    877 ;; *************** function _Secuencia2 *****************
    878 ;; Defined at:
-   879 ;;		line 135 in file "LedRotativo.c"
+   879 ;;		line 136 in file "LedRotativo.c"
    880 ;; Parameters:    Size  Location     Type
    881 ;;		None
    882 ;; Auto vars:     Size  Location     Type
@@ -922,7 +922,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    908                           ;psect for function _Secuencia2
    909  054D                     _Secuencia2:	
    910                           
-   911                           ;LedRotativo.c: 136: PORTB = 0B10000001;
+   911                           ;LedRotativo.c: 137: PORTB = 0B10000001;
    912                           
    913                           ;incstack = 0
    914                           ; Regs used in _Secuencia2: [wreg+status,2+status,0+pclath+cstack]
@@ -931,7 +931,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    917  054F  1303               	bcf	3,6	;RP1=0, select bank0
    918  0550  0086               	movwf	6	;volatile
    919                           
-   920                           ;LedRotativo.c: 137: _delay((unsigned long)((500)*(4000000/4000.0)));
+   920                           ;LedRotativo.c: 138: _delay((unsigned long)((500)*(4000000/4000.0)));
    921  0551  3003               	movlw	3
    922  0552  00F2               	movwf	??_Secuencia2+2
    923  0553  308A               	movlw	138
@@ -947,25 +947,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    933  055C  2D57               	goto	u837
    934  055D  2D5E               	nop2
    935                           
-   936                           ;LedRotativo.c: 138: cambio();
+   936                           ;LedRotativo.c: 139: cambio();
    937  055E  120A  118A  24F7  120A  118A  	fcall	_cambio
    938                           
-   939                           ;LedRotativo.c: 139: if(bandera != 2)
+   939                           ;LedRotativo.c: 140: if(bandera != 2)
    940  0563  3002               	movlw	2
    941  0564  0677               	xorwf	_bandera,w
    942  0565  0478               	iorwf	_bandera+1,w
    943  0566  1D03               	btfss	3,2
    944  0567  0008               	return
    945                           
-   946                           ;LedRotativo.c: 141: PORTB = 0B01000010;
+   946                           ;LedRotativo.c: 142: PORTB = 0B01000010;
    947                           
-   948                           ;LedRotativo.c: 140: return;
+   948                           ;LedRotativo.c: 141: return;
    949  0568  3042               	movlw	66
    950  0569  1283               	bcf	3,5	;RP0=0, select bank0
    951  056A  1303               	bcf	3,6	;RP1=0, select bank0
    952  056B  0086               	movwf	6	;volatile
    953                           
-   954                           ;LedRotativo.c: 142: _delay((unsigned long)((500)*(4000000/4000.0)));
+   954                           ;LedRotativo.c: 143: _delay((unsigned long)((500)*(4000000/4000.0)));
    955  056C  3003               	movlw	3
    956  056D  00F2               	movwf	??_Secuencia2+2
    957  056E  308A               	movlw	138
@@ -981,25 +981,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    967  0577  2D72               	goto	u847
    968  0578  2D79               	nop2
    969                           
-   970                           ;LedRotativo.c: 143: cambio();
+   970                           ;LedRotativo.c: 144: cambio();
    971  0579  120A  118A  24F7  120A  118A  	fcall	_cambio
    972                           
-   973                           ;LedRotativo.c: 144: if(bandera != 2)
+   973                           ;LedRotativo.c: 145: if(bandera != 2)
    974  057E  3002               	movlw	2
    975  057F  0677               	xorwf	_bandera,w
    976  0580  0478               	iorwf	_bandera+1,w
    977  0581  1D03               	btfss	3,2
    978  0582  0008               	return
    979                           
-   980                           ;LedRotativo.c: 146: PORTB = 0B00100100;
+   980                           ;LedRotativo.c: 147: PORTB = 0B00100100;
    981                           
-   982                           ;LedRotativo.c: 145: return;
+   982                           ;LedRotativo.c: 146: return;
    983  0583  3024               	movlw	36
    984  0584  1283               	bcf	3,5	;RP0=0, select bank0
    985  0585  1303               	bcf	3,6	;RP1=0, select bank0
    986  0586  0086               	movwf	6	;volatile
    987                           
-   988                           ;LedRotativo.c: 147: _delay((unsigned long)((500)*(4000000/4000.0)));
+   988                           ;LedRotativo.c: 148: _delay((unsigned long)((500)*(4000000/4000.0)));
    989  0587  3003               	movlw	3
    990  0588  00F2               	movwf	??_Secuencia2+2
    991  0589  308A               	movlw	138
@@ -1015,25 +1015,25 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1001  0592  2D8D               	goto	u857
   1002  0593  2D94               	nop2
   1003                           
-  1004                           ;LedRotativo.c: 148: cambio();
+  1004                           ;LedRotativo.c: 149: cambio();
   1005  0594  120A  118A  24F7  120A  118A  	fcall	_cambio
   1006                           
-  1007                           ;LedRotativo.c: 149: if(bandera != 2)
+  1007                           ;LedRotativo.c: 150: if(bandera != 2)
   1008  0599  3002               	movlw	2
   1009  059A  0677               	xorwf	_bandera,w
   1010  059B  0478               	iorwf	_bandera+1,w
   1011  059C  1D03               	btfss	3,2
   1012  059D  0008               	return
   1013                           
-  1014                           ;LedRotativo.c: 151: PORTB = 0B00011000;
+  1014                           ;LedRotativo.c: 152: PORTB = 0B00011000;
   1015                           
-  1016                           ;LedRotativo.c: 150: return;
+  1016                           ;LedRotativo.c: 151: return;
   1017  059E  3018               	movlw	24
   1018  059F  1283               	bcf	3,5	;RP0=0, select bank0
   1019  05A0  1303               	bcf	3,6	;RP1=0, select bank0
   1020  05A1  0086               	movwf	6	;volatile
   1021                           
-  1022                           ;LedRotativo.c: 152: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1022                           ;LedRotativo.c: 153: _delay((unsigned long)((500)*(4000000/4000.0)));
   1023  05A2  3003               	movlw	3
   1024  05A3  00F2               	movwf	??_Secuencia2+2
   1025  05A4  308A               	movlw	138
@@ -1049,10 +1049,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1035  05AD  2DA8               	goto	u867
   1036  05AE  2DAF               	nop2
   1037                           
-  1038                           ;LedRotativo.c: 153: cambio();
+  1038                           ;LedRotativo.c: 154: cambio();
   1039  05AF  120A  118A  24F7   	fcall	_cambio
   1040                           
-  1041                           ;LedRotativo.c: 155: return;
+  1041                           ;LedRotativo.c: 156: return;
   1042  05B2  0008               	return
   1043  05B3                     __end_of_Secuencia2:	
   1044                           
@@ -1060,7 +1060,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1046  0619                     __ptext4:	
   1047 ;; *************** function _Secuencia1 *****************
   1048 ;; Defined at:
-  1049 ;;		line 91 in file "LedRotativo.c"
+  1049 ;;		line 92 in file "LedRotativo.c"
   1050 ;; Parameters:    Size  Location     Type
   1051 ;;  aux             2    0[COMMON] int 
   1052 ;; Auto vars:     Size  Location     Type
@@ -1092,7 +1092,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1078                           ;psect for function _Secuencia1
   1079  0619                     _Secuencia1:	
   1080                           
-  1081                           ;LedRotativo.c: 92: PORTB = 0B00000001;
+  1081                           ;LedRotativo.c: 93: PORTB = 0B00000001;
   1082                           
   1083                           ;incstack = 0
   1084                           ; Regs used in _Secuencia1: [wreg+status,2+status,0+pclath+cstack]
@@ -1101,7 +1101,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1087  061B  1303               	bcf	3,6	;RP1=0, select bank0
   1088  061C  0086               	movwf	6	;volatile
   1089                           
-  1090                           ;LedRotativo.c: 93: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1090                           ;LedRotativo.c: 94: _delay((unsigned long)((500)*(4000000/4000.0)));
   1091  061D  3003               	movlw	3
   1092  061E  00F4               	movwf	??_Secuencia1+2
   1093  061F  308A               	movlw	138
@@ -1117,16 +1117,16 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1103  0628  2E23               	goto	u877
   1104  0629  2E2A               	nop2
   1105                           
-  1106                           ;LedRotativo.c: 94: int band = aux;
+  1106                           ;LedRotativo.c: 95: int band = aux;
   1107  062A  0871               	movf	Secuencia1@aux+1,w
   1108  062B  00F6               	movwf	Secuencia1@band+1
   1109  062C  0870               	movf	Secuencia1@aux,w
   1110  062D  00F5               	movwf	Secuencia1@band
   1111                           
-  1112                           ;LedRotativo.c: 95: cambio();
+  1112                           ;LedRotativo.c: 96: cambio();
   1113  062E  120A  118A  24F7  120A  118A  	fcall	_cambio
   1114                           
-  1115                           ;LedRotativo.c: 96: if(bandera != band)
+  1115                           ;LedRotativo.c: 97: if(bandera != band)
   1116  0633  0876               	movf	Secuencia1@band+1,w
   1117  0634  0678               	xorwf	_bandera+1,w
   1118  0635  1D03               	skipz
@@ -1137,15 +1137,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1123  0639  1D03               	btfss	3,2
   1124  063A  0008               	return
   1125                           
-  1126                           ;LedRotativo.c: 98: PORTB = 0B00000010;
+  1126                           ;LedRotativo.c: 99: PORTB = 0B00000010;
   1127                           
-  1128                           ;LedRotativo.c: 97: return;
+  1128                           ;LedRotativo.c: 98: return;
   1129  063B  3002               	movlw	2
   1130  063C  1283               	bcf	3,5	;RP0=0, select bank0
   1131  063D  1303               	bcf	3,6	;RP1=0, select bank0
   1132  063E  0086               	movwf	6	;volatile
   1133                           
-  1134                           ;LedRotativo.c: 99: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1134                           ;LedRotativo.c: 100: _delay((unsigned long)((500)*(4000000/4000.0)));
   1135  063F  3003               	movlw	3
   1136  0640  00F4               	movwf	??_Secuencia1+2
   1137  0641  308A               	movlw	138
@@ -1161,10 +1161,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1147  064A  2E45               	goto	u887
   1148  064B  2E4C               	nop2
   1149                           
-  1150                           ;LedRotativo.c: 100: cambio();
+  1150                           ;LedRotativo.c: 101: cambio();
   1151  064C  120A  118A  24F7  120A  118A  	fcall	_cambio
   1152                           
-  1153                           ;LedRotativo.c: 101: if(bandera != band)
+  1153                           ;LedRotativo.c: 102: if(bandera != band)
   1154  0651  0876               	movf	Secuencia1@band+1,w
   1155  0652  0678               	xorwf	_bandera+1,w
   1156  0653  1D03               	skipz
@@ -1175,15 +1175,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1161  0657  1D03               	btfss	3,2
   1162  0658  0008               	return
   1163                           
-  1164                           ;LedRotativo.c: 103: PORTB = 0B00000100;
+  1164                           ;LedRotativo.c: 104: PORTB = 0B00000100;
   1165                           
-  1166                           ;LedRotativo.c: 102: return;
+  1166                           ;LedRotativo.c: 103: return;
   1167  0659  3004               	movlw	4
   1168  065A  1283               	bcf	3,5	;RP0=0, select bank0
   1169  065B  1303               	bcf	3,6	;RP1=0, select bank0
   1170  065C  0086               	movwf	6	;volatile
   1171                           
-  1172                           ;LedRotativo.c: 104: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1172                           ;LedRotativo.c: 105: _delay((unsigned long)((500)*(4000000/4000.0)));
   1173  065D  3003               	movlw	3
   1174  065E  00F4               	movwf	??_Secuencia1+2
   1175  065F  308A               	movlw	138
@@ -1199,10 +1199,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1185  0668  2E63               	goto	u897
   1186  0669  2E6A               	nop2
   1187                           
-  1188                           ;LedRotativo.c: 105: cambio();
+  1188                           ;LedRotativo.c: 106: cambio();
   1189  066A  120A  118A  24F7  120A  118A  	fcall	_cambio
   1190                           
-  1191                           ;LedRotativo.c: 106: if(bandera != band)
+  1191                           ;LedRotativo.c: 107: if(bandera != band)
   1192  066F  0876               	movf	Secuencia1@band+1,w
   1193  0670  0678               	xorwf	_bandera+1,w
   1194  0671  1D03               	skipz
@@ -1213,15 +1213,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1199  0675  1D03               	btfss	3,2
   1200  0676  0008               	return
   1201                           
-  1202                           ;LedRotativo.c: 108: PORTB = 0B00001000;
+  1202                           ;LedRotativo.c: 109: PORTB = 0B00001000;
   1203                           
-  1204                           ;LedRotativo.c: 107: return;
+  1204                           ;LedRotativo.c: 108: return;
   1205  0677  3008               	movlw	8
   1206  0678  1283               	bcf	3,5	;RP0=0, select bank0
   1207  0679  1303               	bcf	3,6	;RP1=0, select bank0
   1208  067A  0086               	movwf	6	;volatile
   1209                           
-  1210                           ;LedRotativo.c: 109: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1210                           ;LedRotativo.c: 110: _delay((unsigned long)((500)*(4000000/4000.0)));
   1211  067B  3003               	movlw	3
   1212  067C  00F4               	movwf	??_Secuencia1+2
   1213  067D  308A               	movlw	138
@@ -1237,10 +1237,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1223  0686  2E81               	goto	u907
   1224  0687  2E88               	nop2
   1225                           
-  1226                           ;LedRotativo.c: 110: cambio();
+  1226                           ;LedRotativo.c: 111: cambio();
   1227  0688  120A  118A  24F7  120A  118A  	fcall	_cambio
   1228                           
-  1229                           ;LedRotativo.c: 111: if(bandera != band)
+  1229                           ;LedRotativo.c: 112: if(bandera != band)
   1230  068D  0876               	movf	Secuencia1@band+1,w
   1231  068E  0678               	xorwf	_bandera+1,w
   1232  068F  1D03               	skipz
@@ -1251,15 +1251,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1237  0693  1D03               	btfss	3,2
   1238  0694  0008               	return
   1239                           
-  1240                           ;LedRotativo.c: 113: PORTB = 0B00010000;
+  1240                           ;LedRotativo.c: 114: PORTB = 0B00010000;
   1241                           
-  1242                           ;LedRotativo.c: 112: return;
+  1242                           ;LedRotativo.c: 113: return;
   1243  0695  3010               	movlw	16
   1244  0696  1283               	bcf	3,5	;RP0=0, select bank0
   1245  0697  1303               	bcf	3,6	;RP1=0, select bank0
   1246  0698  0086               	movwf	6	;volatile
   1247                           
-  1248                           ;LedRotativo.c: 114: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1248                           ;LedRotativo.c: 115: _delay((unsigned long)((500)*(4000000/4000.0)));
   1249  0699  3003               	movlw	3
   1250  069A  00F4               	movwf	??_Secuencia1+2
   1251  069B  308A               	movlw	138
@@ -1275,10 +1275,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1261  06A4  2E9F               	goto	u917
   1262  06A5  2EA6               	nop2
   1263                           
-  1264                           ;LedRotativo.c: 115: cambio();
+  1264                           ;LedRotativo.c: 116: cambio();
   1265  06A6  120A  118A  24F7  120A  118A  	fcall	_cambio
   1266                           
-  1267                           ;LedRotativo.c: 116: if(bandera != band)
+  1267                           ;LedRotativo.c: 117: if(bandera != band)
   1268  06AB  0876               	movf	Secuencia1@band+1,w
   1269  06AC  0678               	xorwf	_bandera+1,w
   1270  06AD  1D03               	skipz
@@ -1289,15 +1289,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1275  06B1  1D03               	btfss	3,2
   1276  06B2  0008               	return
   1277                           
-  1278                           ;LedRotativo.c: 118: PORTB = 0B00100000;
+  1278                           ;LedRotativo.c: 119: PORTB = 0B00100000;
   1279                           
-  1280                           ;LedRotativo.c: 117: return;
+  1280                           ;LedRotativo.c: 118: return;
   1281  06B3  3020               	movlw	32
   1282  06B4  1283               	bcf	3,5	;RP0=0, select bank0
   1283  06B5  1303               	bcf	3,6	;RP1=0, select bank0
   1284  06B6  0086               	movwf	6	;volatile
   1285                           
-  1286                           ;LedRotativo.c: 119: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1286                           ;LedRotativo.c: 120: _delay((unsigned long)((500)*(4000000/4000.0)));
   1287  06B7  3003               	movlw	3
   1288  06B8  00F4               	movwf	??_Secuencia1+2
   1289  06B9  308A               	movlw	138
@@ -1313,10 +1313,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1299  06C2  2EBD               	goto	u927
   1300  06C3  2EC4               	nop2
   1301                           
-  1302                           ;LedRotativo.c: 120: cambio();
+  1302                           ;LedRotativo.c: 121: cambio();
   1303  06C4  120A  118A  24F7  120A  118A  	fcall	_cambio
   1304                           
-  1305                           ;LedRotativo.c: 121: if(bandera != band)
+  1305                           ;LedRotativo.c: 122: if(bandera != band)
   1306  06C9  0876               	movf	Secuencia1@band+1,w
   1307  06CA  0678               	xorwf	_bandera+1,w
   1308  06CB  1D03               	skipz
@@ -1327,15 +1327,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1313  06CF  1D03               	btfss	3,2
   1314  06D0  0008               	return
   1315                           
-  1316                           ;LedRotativo.c: 123: PORTB = 0B01000000;
+  1316                           ;LedRotativo.c: 124: PORTB = 0B01000000;
   1317                           
-  1318                           ;LedRotativo.c: 122: return;
+  1318                           ;LedRotativo.c: 123: return;
   1319  06D1  3040               	movlw	64
   1320  06D2  1283               	bcf	3,5	;RP0=0, select bank0
   1321  06D3  1303               	bcf	3,6	;RP1=0, select bank0
   1322  06D4  0086               	movwf	6	;volatile
   1323                           
-  1324                           ;LedRotativo.c: 124: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1324                           ;LedRotativo.c: 125: _delay((unsigned long)((500)*(4000000/4000.0)));
   1325  06D5  3003               	movlw	3
   1326  06D6  00F4               	movwf	??_Secuencia1+2
   1327  06D7  308A               	movlw	138
@@ -1351,10 +1351,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1337  06E0  2EDB               	goto	u937
   1338  06E1  2EE2               	nop2
   1339                           
-  1340                           ;LedRotativo.c: 125: cambio();
+  1340                           ;LedRotativo.c: 126: cambio();
   1341  06E2  120A  118A  24F7  120A  118A  	fcall	_cambio
   1342                           
-  1343                           ;LedRotativo.c: 126: if(bandera != band)
+  1343                           ;LedRotativo.c: 127: if(bandera != band)
   1344  06E7  0876               	movf	Secuencia1@band+1,w
   1345  06E8  0678               	xorwf	_bandera+1,w
   1346  06E9  1D03               	skipz
@@ -1365,15 +1365,15 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1351  06ED  1D03               	btfss	3,2
   1352  06EE  0008               	return
   1353                           
-  1354                           ;LedRotativo.c: 128: PORTB = 0B10000000;
+  1354                           ;LedRotativo.c: 129: PORTB = 0B10000000;
   1355                           
-  1356                           ;LedRotativo.c: 127: return;
+  1356                           ;LedRotativo.c: 128: return;
   1357  06EF  3080               	movlw	128
   1358  06F0  1283               	bcf	3,5	;RP0=0, select bank0
   1359  06F1  1303               	bcf	3,6	;RP1=0, select bank0
   1360  06F2  0086               	movwf	6	;volatile
   1361                           
-  1362                           ;LedRotativo.c: 129: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1362                           ;LedRotativo.c: 130: _delay((unsigned long)((500)*(4000000/4000.0)));
   1363  06F3  3003               	movlw	3
   1364  06F4  00F4               	movwf	??_Secuencia1+2
   1365  06F5  308A               	movlw	138
@@ -1389,10 +1389,10 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1375  06FE  2EF9               	goto	u947
   1376  06FF  2F00               	nop2
   1377                           
-  1378                           ;LedRotativo.c: 130: cambio();
+  1378                           ;LedRotativo.c: 131: cambio();
   1379  0700  120A  118A  24F7   	fcall	_cambio
   1380                           
-  1381                           ;LedRotativo.c: 132: return;
+  1381                           ;LedRotativo.c: 133: return;
   1382  0703  0008               	return
   1383  0704                     __end_of_Secuencia1:	
   1384                           
@@ -1400,7 +1400,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1386  04F7                     __ptext5:	
   1387 ;; *************** function _cambio *****************
   1388 ;; Defined at:
-  1389 ;;		line 52 in file "LedRotativo.c"
+  1389 ;;		line 53 in file "LedRotativo.c"
   1390 ;; Parameters:    Size  Location     Type
   1391 ;;		None
   1392 ;; Auto vars:     Size  Location     Type
@@ -1435,7 +1435,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1421                           ;psect for function _cambio
   1422  04F7                     _cambio:	
   1423                           
-  1424                           ;LedRotativo.c: 53: if (PORTCbits.RC0 == 1){
+  1424                           ;LedRotativo.c: 54: if (PORTCbits.RC0 == 1){
   1425                           
   1426                           ;incstack = 0
   1427                           ; Regs used in _cambio: [wreg+status,2+status,0]
@@ -1444,107 +1444,107 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1430  04F9  1C07               	btfss	7,0	;volatile
   1431  04FA  2D02               	goto	l68
   1432                           
-  1433                           ;LedRotativo.c: 54: boton1 = 1;
+  1433                           ;LedRotativo.c: 55: boton1 = 1;
   1434  04FB  3001               	movlw	1
   1435  04FC  00FB               	movwf	_boton1
   1436  04FD  3000               	movlw	0
   1437  04FE  00FC               	movwf	_boton1+1
   1438                           
-  1439                           ;LedRotativo.c: 55: boton2 = 0;
+  1439                           ;LedRotativo.c: 56: boton2 = 0;
   1440  04FF  01F9               	clrf	_boton2
   1441  0500  01FA               	clrf	_boton2+1
   1442  0501  2D0A               	goto	L1
   1443  0502                     l68:	
-  1444                           ;LedRotativo.c: 58: }
+  1444                           ;LedRotativo.c: 59: }
   1445                           
-  1446                           ;LedRotativo.c: 57: boton4 = 0;
+  1446                           ;LedRotativo.c: 58: boton4 = 0;
   1447                           
-  1448                           ;LedRotativo.c: 56: boton3 = 0;
+  1448                           ;LedRotativo.c: 57: boton3 = 0;
   1449                           
   1450                           
-  1451                           ;LedRotativo.c: 59: else if (PORTCbits.RC1 == 1){
+  1451                           ;LedRotativo.c: 60: else if (PORTCbits.RC1 == 1){
   1452  0502  1C87               	btfss	7,1	;volatile
   1453  0503  2D0D               	goto	l70
   1454                           
-  1455                           ;LedRotativo.c: 60: boton1 = 0;
+  1455                           ;LedRotativo.c: 61: boton1 = 0;
   1456  0504  01FB               	clrf	_boton1
   1457  0505  01FC               	clrf	_boton1+1
   1458                           
-  1459                           ;LedRotativo.c: 61: boton2 = 1;
+  1459                           ;LedRotativo.c: 62: boton2 = 1;
   1460  0506  3001               	movlw	1
   1461  0507  00F9               	movwf	_boton2
   1462  0508  3000               	movlw	0
   1463  0509  00FA               	movwf	_boton2+1
   1464  050A                     L1:	
   1465                           
-  1466                           ;LedRotativo.c: 62: boton3 = 0;
+  1466                           ;LedRotativo.c: 63: boton3 = 0;
   1467  050A  01A2               	clrf	_boton3
   1468  050B  01A3               	clrf	_boton3+1
   1469  050C  2D17               	goto	l882
   1470  050D                     l70:	
-  1471                           ;LedRotativo.c: 65: }
+  1471                           ;LedRotativo.c: 66: }
   1472                           
-  1473                           ;LedRotativo.c: 63: boton4 = 0;
+  1473                           ;LedRotativo.c: 64: boton4 = 0;
   1474                           
   1475                           
-  1476                           ;LedRotativo.c: 66: else if (PORTCbits.RC2 == 1){
+  1476                           ;LedRotativo.c: 67: else if (PORTCbits.RC2 == 1){
   1477  050D  1D07               	btfss	7,2	;volatile
   1478  050E  2D1A               	goto	l72
   1479                           
-  1480                           ;LedRotativo.c: 67: boton1 = 0;
+  1480                           ;LedRotativo.c: 68: boton1 = 0;
   1481  050F  01FB               	clrf	_boton1
   1482  0510  01FC               	clrf	_boton1+1
   1483                           
-  1484                           ;LedRotativo.c: 68: boton2 = 0;
+  1484                           ;LedRotativo.c: 69: boton2 = 0;
   1485  0511  01F9               	clrf	_boton2
   1486  0512  01FA               	clrf	_boton2+1
   1487                           
-  1488                           ;LedRotativo.c: 69: boton3 = 1;
+  1488                           ;LedRotativo.c: 70: boton3 = 1;
   1489  0513  3001               	movlw	1
   1490  0514  00A2               	movwf	_boton3
   1491  0515  3000               	movlw	0
   1492  0516  00A3               	movwf	_boton3+1
   1493  0517                     l882:	
   1494                           
-  1495                           ;LedRotativo.c: 70: boton4 = 0;
+  1495                           ;LedRotativo.c: 71: boton4 = 0;
   1496  0517  01A0               	clrf	_boton4
   1497  0518  01A1               	clrf	_boton4+1
   1498                           
-  1499                           ;LedRotativo.c: 72: }
+  1499                           ;LedRotativo.c: 73: }
   1500  0519  2D26               	goto	l888
   1501  051A                     l72:	
   1502                           
-  1503                           ;LedRotativo.c: 73: else if (PORTCbits.RC3 == 1){
+  1503                           ;LedRotativo.c: 74: else if (PORTCbits.RC3 == 1){
   1504  051A  1D87               	btfss	7,3	;volatile
   1505  051B  2D26               	goto	l888
   1506                           
-  1507                           ;LedRotativo.c: 74: boton1 = 0;
+  1507                           ;LedRotativo.c: 75: boton1 = 0;
   1508  051C  01FB               	clrf	_boton1
   1509  051D  01FC               	clrf	_boton1+1
   1510                           
-  1511                           ;LedRotativo.c: 75: boton2 = 0;
+  1511                           ;LedRotativo.c: 76: boton2 = 0;
   1512  051E  01F9               	clrf	_boton2
   1513  051F  01FA               	clrf	_boton2+1
   1514                           
-  1515                           ;LedRotativo.c: 76: boton3 = 0;
+  1515                           ;LedRotativo.c: 77: boton3 = 0;
   1516  0520  01A2               	clrf	_boton3
   1517  0521  01A3               	clrf	_boton3+1
   1518                           
-  1519                           ;LedRotativo.c: 77: boton4 = 1;
+  1519                           ;LedRotativo.c: 78: boton4 = 1;
   1520  0522  3001               	movlw	1
   1521  0523  00A0               	movwf	_boton4
   1522  0524  3000               	movlw	0
   1523  0525  00A1               	movwf	_boton4+1
   1524  0526                     l888:	
   1525                           
-  1526                           ;LedRotativo.c: 78: }
-  1527                           ;LedRotativo.c: 80: if (boton1 == 1)
+  1526                           ;LedRotativo.c: 79: }
+  1527                           ;LedRotativo.c: 81: if (boton1 == 1)
   1528  0526  037B               	decf	_boton1,w
   1529  0527  047C               	iorwf	_boton1+1,w
   1530  0528  1D03               	btfss	3,2
   1531  0529  2D2F               	goto	l892
   1532                           
-  1533                           ;LedRotativo.c: 81: bandera = 1;
+  1533                           ;LedRotativo.c: 82: bandera = 1;
   1534  052A  3001               	movlw	1
   1535  052B  00F7               	movwf	_bandera
   1536  052C  3000               	movlw	0
@@ -1552,13 +1552,13 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1538  052E  0008               	return
   1539  052F                     l892:	
   1540                           
-  1541                           ;LedRotativo.c: 82: else if (boton2 == 1)
+  1541                           ;LedRotativo.c: 83: else if (boton2 == 1)
   1542  052F  0379               	decf	_boton2,w
   1543  0530  047A               	iorwf	_boton2+1,w
   1544  0531  1D03               	btfss	3,2
   1545  0532  2D38               	goto	l896
   1546                           
-  1547                           ;LedRotativo.c: 83: bandera = 2;
+  1547                           ;LedRotativo.c: 84: bandera = 2;
   1548  0533  3002               	movlw	2
   1549  0534  00F7               	movwf	_bandera
   1550  0535  3000               	movlw	0
@@ -1566,13 +1566,13 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1552  0537  0008               	return
   1553  0538                     l896:	
   1554                           
-  1555                           ;LedRotativo.c: 84: else if (boton3 == 1 )
+  1555                           ;LedRotativo.c: 85: else if (boton3 == 1 )
   1556  0538  0322               	decf	_boton3,w
   1557  0539  0423               	iorwf	_boton3+1,w
   1558  053A  1D03               	btfss	3,2
   1559  053B  2D41               	goto	l900
   1560                           
-  1561                           ;LedRotativo.c: 85: bandera = 3;
+  1561                           ;LedRotativo.c: 86: bandera = 3;
   1562  053C  3003               	movlw	3
   1563  053D  00F7               	movwf	_bandera
   1564  053E  3000               	movlw	0
@@ -1580,13 +1580,13 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1566  0540  0008               	return
   1567  0541                     l900:	
   1568                           
-  1569                           ;LedRotativo.c: 86: else if (boton4 == 1)
+  1569                           ;LedRotativo.c: 87: else if (boton4 == 1)
   1570  0541  0320               	decf	_boton4,w
   1571  0542  0421               	iorwf	_boton4+1,w
   1572  0543  1D03               	btfss	3,2
   1573  0544  2D4A               	goto	l904
   1574                           
-  1575                           ;LedRotativo.c: 87: bandera = 4;
+  1575                           ;LedRotativo.c: 88: bandera = 4;
   1576  0545  3004               	movlw	4
   1577  0546  00F7               	movwf	_bandera
   1578  0547  3000               	movlw	0
@@ -1594,8 +1594,8 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1580  0549  0008               	return
   1581  054A                     l904:	
   1582                           
-  1583                           ;LedRotativo.c: 88: else
-  1584                           ;LedRotativo.c: 89: bandera = 0;
+  1583                           ;LedRotativo.c: 89: else
+  1584                           ;LedRotativo.c: 90: bandera = 0;
   1585  054A  01F7               	clrf	_bandera
   1586  054B  01F8               	clrf	_bandera+1
   1587  054C  0008               	return
@@ -1719,7 +1719,7 @@ DATA                 0      0      11      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Sat Sep 02 22:45:36 2017
+Symbol Table                                                                                   Sun Sep 03 20:57:20 2017
 
                      l70 050D                       l55 04C3                       l72 051A  
                      l68 0502                      l900 0541                      l904 054A  

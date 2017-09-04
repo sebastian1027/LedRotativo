@@ -22,7 +22,7 @@ maintext CODE 0 4AA 4AA 4D 2
 cstackCOMMON COMMON 1 70 70 7 1
 bssBANK0 BANK0 1 20 20 4 1
 bssCOMMON COMMON 1 77 77 6 1
-$C:\Users\sebas\AppData\Local\Temp\s20c.obj
+$C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 end_init CODE 0 0 0 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -71,175 +71,175 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LedRotativo.production.obj
-7F0 cinit CODE >219:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F0 cinit CODE >222:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F0 cinit CODE >248:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F1 cinit CODE >249:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F2 cinit CODE >250:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F3 cinit CODE >251:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F4 cinit CODE >252:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F5 cinit CODE >253:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F6 cinit CODE >256:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F7 cinit CODE >257:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F8 cinit CODE >258:C:\Users\sebas\AppData\Local\Temp\s20c.
-7F9 cinit CODE >259:C:\Users\sebas\AppData\Local\Temp\s20c.
-7FA cinit CODE >260:C:\Users\sebas\AppData\Local\Temp\s20c.
-7FB cinit CODE >261:C:\Users\sebas\AppData\Local\Temp\s20c.
-7FC cinit CODE >267:C:\Users\sebas\AppData\Local\Temp\s20c.
-7FC cinit CODE >269:C:\Users\sebas\AppData\Local\Temp\s20c.
-7FD cinit CODE >270:C:\Users\sebas\AppData\Local\Temp\s20c.
-4F7 text5 CODE >52:E:\DigitalesII\LedRotativo\LedRotativo.c
+7F0 cinit CODE >219:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F0 cinit CODE >222:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F0 cinit CODE >248:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F1 cinit CODE >249:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F2 cinit CODE >250:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F3 cinit CODE >251:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F4 cinit CODE >252:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F5 cinit CODE >253:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F6 cinit CODE >256:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F7 cinit CODE >257:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F8 cinit CODE >258:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7F9 cinit CODE >259:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7FA cinit CODE >260:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7FB cinit CODE >261:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7FC cinit CODE >267:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7FC cinit CODE >269:C:\Users\sebas\AppData\Local\Temp\s7pc.
+7FD cinit CODE >270:C:\Users\sebas\AppData\Local\Temp\s7pc.
 4F7 text5 CODE >53:E:\DigitalesII\LedRotativo\LedRotativo.c
-4FB text5 CODE >54:E:\DigitalesII\LedRotativo\LedRotativo.c
-4FF text5 CODE >55:E:\DigitalesII\LedRotativo\LedRotativo.c
-502 text5 CODE >59:E:\DigitalesII\LedRotativo\LedRotativo.c
-504 text5 CODE >60:E:\DigitalesII\LedRotativo\LedRotativo.c
-506 text5 CODE >61:E:\DigitalesII\LedRotativo\LedRotativo.c
-50A text5 CODE >62:E:\DigitalesII\LedRotativo\LedRotativo.c
-50C text5 CODE >63:E:\DigitalesII\LedRotativo\LedRotativo.c
-50D text5 CODE >66:E:\DigitalesII\LedRotativo\LedRotativo.c
-50F text5 CODE >67:E:\DigitalesII\LedRotativo\LedRotativo.c
-511 text5 CODE >68:E:\DigitalesII\LedRotativo\LedRotativo.c
-513 text5 CODE >69:E:\DigitalesII\LedRotativo\LedRotativo.c
-517 text5 CODE >70:E:\DigitalesII\LedRotativo\LedRotativo.c
-519 text5 CODE >72:E:\DigitalesII\LedRotativo\LedRotativo.c
-51A text5 CODE >73:E:\DigitalesII\LedRotativo\LedRotativo.c
-51C text5 CODE >74:E:\DigitalesII\LedRotativo\LedRotativo.c
-51E text5 CODE >75:E:\DigitalesII\LedRotativo\LedRotativo.c
-520 text5 CODE >76:E:\DigitalesII\LedRotativo\LedRotativo.c
-522 text5 CODE >77:E:\DigitalesII\LedRotativo\LedRotativo.c
-526 text5 CODE >80:E:\DigitalesII\LedRotativo\LedRotativo.c
-52A text5 CODE >81:E:\DigitalesII\LedRotativo\LedRotativo.c
-52F text5 CODE >82:E:\DigitalesII\LedRotativo\LedRotativo.c
-533 text5 CODE >83:E:\DigitalesII\LedRotativo\LedRotativo.c
-538 text5 CODE >84:E:\DigitalesII\LedRotativo\LedRotativo.c
-53C text5 CODE >85:E:\DigitalesII\LedRotativo\LedRotativo.c
-541 text5 CODE >86:E:\DigitalesII\LedRotativo\LedRotativo.c
-545 text5 CODE >87:E:\DigitalesII\LedRotativo\LedRotativo.c
-54A text5 CODE >89:E:\DigitalesII\LedRotativo\LedRotativo.c
-619 text4 CODE >91:E:\DigitalesII\LedRotativo\LedRotativo.c
+4F7 text5 CODE >54:E:\DigitalesII\LedRotativo\LedRotativo.c
+4FB text5 CODE >55:E:\DigitalesII\LedRotativo\LedRotativo.c
+4FF text5 CODE >56:E:\DigitalesII\LedRotativo\LedRotativo.c
+502 text5 CODE >60:E:\DigitalesII\LedRotativo\LedRotativo.c
+504 text5 CODE >61:E:\DigitalesII\LedRotativo\LedRotativo.c
+506 text5 CODE >62:E:\DigitalesII\LedRotativo\LedRotativo.c
+50A text5 CODE >63:E:\DigitalesII\LedRotativo\LedRotativo.c
+50C text5 CODE >64:E:\DigitalesII\LedRotativo\LedRotativo.c
+50D text5 CODE >67:E:\DigitalesII\LedRotativo\LedRotativo.c
+50F text5 CODE >68:E:\DigitalesII\LedRotativo\LedRotativo.c
+511 text5 CODE >69:E:\DigitalesII\LedRotativo\LedRotativo.c
+513 text5 CODE >70:E:\DigitalesII\LedRotativo\LedRotativo.c
+517 text5 CODE >71:E:\DigitalesII\LedRotativo\LedRotativo.c
+519 text5 CODE >73:E:\DigitalesII\LedRotativo\LedRotativo.c
+51A text5 CODE >74:E:\DigitalesII\LedRotativo\LedRotativo.c
+51C text5 CODE >75:E:\DigitalesII\LedRotativo\LedRotativo.c
+51E text5 CODE >76:E:\DigitalesII\LedRotativo\LedRotativo.c
+520 text5 CODE >77:E:\DigitalesII\LedRotativo\LedRotativo.c
+522 text5 CODE >78:E:\DigitalesII\LedRotativo\LedRotativo.c
+526 text5 CODE >81:E:\DigitalesII\LedRotativo\LedRotativo.c
+52A text5 CODE >82:E:\DigitalesII\LedRotativo\LedRotativo.c
+52F text5 CODE >83:E:\DigitalesII\LedRotativo\LedRotativo.c
+533 text5 CODE >84:E:\DigitalesII\LedRotativo\LedRotativo.c
+538 text5 CODE >85:E:\DigitalesII\LedRotativo\LedRotativo.c
+53C text5 CODE >86:E:\DigitalesII\LedRotativo\LedRotativo.c
+541 text5 CODE >87:E:\DigitalesII\LedRotativo\LedRotativo.c
+545 text5 CODE >88:E:\DigitalesII\LedRotativo\LedRotativo.c
+54A text5 CODE >90:E:\DigitalesII\LedRotativo\LedRotativo.c
 619 text4 CODE >92:E:\DigitalesII\LedRotativo\LedRotativo.c
-61D text4 CODE >93:E:\DigitalesII\LedRotativo\LedRotativo.c
-62A text4 CODE >94:E:\DigitalesII\LedRotativo\LedRotativo.c
-62E text4 CODE >95:E:\DigitalesII\LedRotativo\LedRotativo.c
-633 text4 CODE >96:E:\DigitalesII\LedRotativo\LedRotativo.c
-63B text4 CODE >98:E:\DigitalesII\LedRotativo\LedRotativo.c
-63F text4 CODE >99:E:\DigitalesII\LedRotativo\LedRotativo.c
-64C text4 CODE >100:E:\DigitalesII\LedRotativo\LedRotativo.c
-651 text4 CODE >101:E:\DigitalesII\LedRotativo\LedRotativo.c
-659 text4 CODE >103:E:\DigitalesII\LedRotativo\LedRotativo.c
-65D text4 CODE >104:E:\DigitalesII\LedRotativo\LedRotativo.c
-66A text4 CODE >105:E:\DigitalesII\LedRotativo\LedRotativo.c
-66F text4 CODE >106:E:\DigitalesII\LedRotativo\LedRotativo.c
-677 text4 CODE >108:E:\DigitalesII\LedRotativo\LedRotativo.c
-67B text4 CODE >109:E:\DigitalesII\LedRotativo\LedRotativo.c
-688 text4 CODE >110:E:\DigitalesII\LedRotativo\LedRotativo.c
-68D text4 CODE >111:E:\DigitalesII\LedRotativo\LedRotativo.c
-695 text4 CODE >113:E:\DigitalesII\LedRotativo\LedRotativo.c
-699 text4 CODE >114:E:\DigitalesII\LedRotativo\LedRotativo.c
-6A6 text4 CODE >115:E:\DigitalesII\LedRotativo\LedRotativo.c
-6AB text4 CODE >116:E:\DigitalesII\LedRotativo\LedRotativo.c
-6B3 text4 CODE >118:E:\DigitalesII\LedRotativo\LedRotativo.c
-6B7 text4 CODE >119:E:\DigitalesII\LedRotativo\LedRotativo.c
-6C4 text4 CODE >120:E:\DigitalesII\LedRotativo\LedRotativo.c
-6C9 text4 CODE >121:E:\DigitalesII\LedRotativo\LedRotativo.c
-6D1 text4 CODE >123:E:\DigitalesII\LedRotativo\LedRotativo.c
-6D5 text4 CODE >124:E:\DigitalesII\LedRotativo\LedRotativo.c
-6E2 text4 CODE >125:E:\DigitalesII\LedRotativo\LedRotativo.c
-6E7 text4 CODE >126:E:\DigitalesII\LedRotativo\LedRotativo.c
-6EF text4 CODE >128:E:\DigitalesII\LedRotativo\LedRotativo.c
-6F3 text4 CODE >129:E:\DigitalesII\LedRotativo\LedRotativo.c
-700 text4 CODE >130:E:\DigitalesII\LedRotativo\LedRotativo.c
-703 text4 CODE >132:E:\DigitalesII\LedRotativo\LedRotativo.c
-54D text3 CODE >135:E:\DigitalesII\LedRotativo\LedRotativo.c
+619 text4 CODE >93:E:\DigitalesII\LedRotativo\LedRotativo.c
+61D text4 CODE >94:E:\DigitalesII\LedRotativo\LedRotativo.c
+62A text4 CODE >95:E:\DigitalesII\LedRotativo\LedRotativo.c
+62E text4 CODE >96:E:\DigitalesII\LedRotativo\LedRotativo.c
+633 text4 CODE >97:E:\DigitalesII\LedRotativo\LedRotativo.c
+63B text4 CODE >99:E:\DigitalesII\LedRotativo\LedRotativo.c
+63F text4 CODE >100:E:\DigitalesII\LedRotativo\LedRotativo.c
+64C text4 CODE >101:E:\DigitalesII\LedRotativo\LedRotativo.c
+651 text4 CODE >102:E:\DigitalesII\LedRotativo\LedRotativo.c
+659 text4 CODE >104:E:\DigitalesII\LedRotativo\LedRotativo.c
+65D text4 CODE >105:E:\DigitalesII\LedRotativo\LedRotativo.c
+66A text4 CODE >106:E:\DigitalesII\LedRotativo\LedRotativo.c
+66F text4 CODE >107:E:\DigitalesII\LedRotativo\LedRotativo.c
+677 text4 CODE >109:E:\DigitalesII\LedRotativo\LedRotativo.c
+67B text4 CODE >110:E:\DigitalesII\LedRotativo\LedRotativo.c
+688 text4 CODE >111:E:\DigitalesII\LedRotativo\LedRotativo.c
+68D text4 CODE >112:E:\DigitalesII\LedRotativo\LedRotativo.c
+695 text4 CODE >114:E:\DigitalesII\LedRotativo\LedRotativo.c
+699 text4 CODE >115:E:\DigitalesII\LedRotativo\LedRotativo.c
+6A6 text4 CODE >116:E:\DigitalesII\LedRotativo\LedRotativo.c
+6AB text4 CODE >117:E:\DigitalesII\LedRotativo\LedRotativo.c
+6B3 text4 CODE >119:E:\DigitalesII\LedRotativo\LedRotativo.c
+6B7 text4 CODE >120:E:\DigitalesII\LedRotativo\LedRotativo.c
+6C4 text4 CODE >121:E:\DigitalesII\LedRotativo\LedRotativo.c
+6C9 text4 CODE >122:E:\DigitalesII\LedRotativo\LedRotativo.c
+6D1 text4 CODE >124:E:\DigitalesII\LedRotativo\LedRotativo.c
+6D5 text4 CODE >125:E:\DigitalesII\LedRotativo\LedRotativo.c
+6E2 text4 CODE >126:E:\DigitalesII\LedRotativo\LedRotativo.c
+6E7 text4 CODE >127:E:\DigitalesII\LedRotativo\LedRotativo.c
+6EF text4 CODE >129:E:\DigitalesII\LedRotativo\LedRotativo.c
+6F3 text4 CODE >130:E:\DigitalesII\LedRotativo\LedRotativo.c
+700 text4 CODE >131:E:\DigitalesII\LedRotativo\LedRotativo.c
+703 text4 CODE >133:E:\DigitalesII\LedRotativo\LedRotativo.c
 54D text3 CODE >136:E:\DigitalesII\LedRotativo\LedRotativo.c
-551 text3 CODE >137:E:\DigitalesII\LedRotativo\LedRotativo.c
-55E text3 CODE >138:E:\DigitalesII\LedRotativo\LedRotativo.c
-563 text3 CODE >139:E:\DigitalesII\LedRotativo\LedRotativo.c
-568 text3 CODE >141:E:\DigitalesII\LedRotativo\LedRotativo.c
-56C text3 CODE >142:E:\DigitalesII\LedRotativo\LedRotativo.c
-579 text3 CODE >143:E:\DigitalesII\LedRotativo\LedRotativo.c
-57E text3 CODE >144:E:\DigitalesII\LedRotativo\LedRotativo.c
-583 text3 CODE >146:E:\DigitalesII\LedRotativo\LedRotativo.c
-587 text3 CODE >147:E:\DigitalesII\LedRotativo\LedRotativo.c
-594 text3 CODE >148:E:\DigitalesII\LedRotativo\LedRotativo.c
-599 text3 CODE >149:E:\DigitalesII\LedRotativo\LedRotativo.c
-59E text3 CODE >151:E:\DigitalesII\LedRotativo\LedRotativo.c
-5A2 text3 CODE >152:E:\DigitalesII\LedRotativo\LedRotativo.c
-5AF text3 CODE >153:E:\DigitalesII\LedRotativo\LedRotativo.c
-5B2 text3 CODE >155:E:\DigitalesII\LedRotativo\LedRotativo.c
-5B3 text2 CODE >159:E:\DigitalesII\LedRotativo\LedRotativo.c
+54D text3 CODE >137:E:\DigitalesII\LedRotativo\LedRotativo.c
+551 text3 CODE >138:E:\DigitalesII\LedRotativo\LedRotativo.c
+55E text3 CODE >139:E:\DigitalesII\LedRotativo\LedRotativo.c
+563 text3 CODE >140:E:\DigitalesII\LedRotativo\LedRotativo.c
+568 text3 CODE >142:E:\DigitalesII\LedRotativo\LedRotativo.c
+56C text3 CODE >143:E:\DigitalesII\LedRotativo\LedRotativo.c
+579 text3 CODE >144:E:\DigitalesII\LedRotativo\LedRotativo.c
+57E text3 CODE >145:E:\DigitalesII\LedRotativo\LedRotativo.c
+583 text3 CODE >147:E:\DigitalesII\LedRotativo\LedRotativo.c
+587 text3 CODE >148:E:\DigitalesII\LedRotativo\LedRotativo.c
+594 text3 CODE >149:E:\DigitalesII\LedRotativo\LedRotativo.c
+599 text3 CODE >150:E:\DigitalesII\LedRotativo\LedRotativo.c
+59E text3 CODE >152:E:\DigitalesII\LedRotativo\LedRotativo.c
+5A2 text3 CODE >153:E:\DigitalesII\LedRotativo\LedRotativo.c
+5AF text3 CODE >154:E:\DigitalesII\LedRotativo\LedRotativo.c
+5B2 text3 CODE >156:E:\DigitalesII\LedRotativo\LedRotativo.c
 5B3 text2 CODE >160:E:\DigitalesII\LedRotativo\LedRotativo.c
-5B7 text2 CODE >161:E:\DigitalesII\LedRotativo\LedRotativo.c
-5C4 text2 CODE >162:E:\DigitalesII\LedRotativo\LedRotativo.c
-5C9 text2 CODE >163:E:\DigitalesII\LedRotativo\LedRotativo.c
-5CE text2 CODE >165:E:\DigitalesII\LedRotativo\LedRotativo.c
-5D2 text2 CODE >166:E:\DigitalesII\LedRotativo\LedRotativo.c
-5DF text2 CODE >167:E:\DigitalesII\LedRotativo\LedRotativo.c
-5E4 text2 CODE >168:E:\DigitalesII\LedRotativo\LedRotativo.c
-5E9 text2 CODE >170:E:\DigitalesII\LedRotativo\LedRotativo.c
-5ED text2 CODE >171:E:\DigitalesII\LedRotativo\LedRotativo.c
-5FA text2 CODE >172:E:\DigitalesII\LedRotativo\LedRotativo.c
-5FF text2 CODE >173:E:\DigitalesII\LedRotativo\LedRotativo.c
-604 text2 CODE >175:E:\DigitalesII\LedRotativo\LedRotativo.c
-608 text2 CODE >176:E:\DigitalesII\LedRotativo\LedRotativo.c
-615 text2 CODE >177:E:\DigitalesII\LedRotativo\LedRotativo.c
-618 text2 CODE >179:E:\DigitalesII\LedRotativo\LedRotativo.c
-704 text1 CODE >183:E:\DigitalesII\LedRotativo\LedRotativo.c
+5B3 text2 CODE >161:E:\DigitalesII\LedRotativo\LedRotativo.c
+5B7 text2 CODE >162:E:\DigitalesII\LedRotativo\LedRotativo.c
+5C4 text2 CODE >163:E:\DigitalesII\LedRotativo\LedRotativo.c
+5C9 text2 CODE >164:E:\DigitalesII\LedRotativo\LedRotativo.c
+5CE text2 CODE >166:E:\DigitalesII\LedRotativo\LedRotativo.c
+5D2 text2 CODE >167:E:\DigitalesII\LedRotativo\LedRotativo.c
+5DF text2 CODE >168:E:\DigitalesII\LedRotativo\LedRotativo.c
+5E4 text2 CODE >169:E:\DigitalesII\LedRotativo\LedRotativo.c
+5E9 text2 CODE >171:E:\DigitalesII\LedRotativo\LedRotativo.c
+5ED text2 CODE >172:E:\DigitalesII\LedRotativo\LedRotativo.c
+5FA text2 CODE >173:E:\DigitalesII\LedRotativo\LedRotativo.c
+5FF text2 CODE >174:E:\DigitalesII\LedRotativo\LedRotativo.c
+604 text2 CODE >176:E:\DigitalesII\LedRotativo\LedRotativo.c
+608 text2 CODE >177:E:\DigitalesII\LedRotativo\LedRotativo.c
+615 text2 CODE >178:E:\DigitalesII\LedRotativo\LedRotativo.c
+618 text2 CODE >180:E:\DigitalesII\LedRotativo\LedRotativo.c
 704 text1 CODE >184:E:\DigitalesII\LedRotativo\LedRotativo.c
-708 text1 CODE >185:E:\DigitalesII\LedRotativo\LedRotativo.c
-715 text1 CODE >186:E:\DigitalesII\LedRotativo\LedRotativo.c
-71A text1 CODE >187:E:\DigitalesII\LedRotativo\LedRotativo.c
-71F text1 CODE >189:E:\DigitalesII\LedRotativo\LedRotativo.c
-723 text1 CODE >190:E:\DigitalesII\LedRotativo\LedRotativo.c
-730 text1 CODE >191:E:\DigitalesII\LedRotativo\LedRotativo.c
-735 text1 CODE >192:E:\DigitalesII\LedRotativo\LedRotativo.c
-73A text1 CODE >194:E:\DigitalesII\LedRotativo\LedRotativo.c
-73E text1 CODE >195:E:\DigitalesII\LedRotativo\LedRotativo.c
-74B text1 CODE >196:E:\DigitalesII\LedRotativo\LedRotativo.c
-750 text1 CODE >197:E:\DigitalesII\LedRotativo\LedRotativo.c
-755 text1 CODE >199:E:\DigitalesII\LedRotativo\LedRotativo.c
-759 text1 CODE >200:E:\DigitalesII\LedRotativo\LedRotativo.c
-766 text1 CODE >201:E:\DigitalesII\LedRotativo\LedRotativo.c
-76B text1 CODE >202:E:\DigitalesII\LedRotativo\LedRotativo.c
-770 text1 CODE >204:E:\DigitalesII\LedRotativo\LedRotativo.c
-774 text1 CODE >205:E:\DigitalesII\LedRotativo\LedRotativo.c
-781 text1 CODE >206:E:\DigitalesII\LedRotativo\LedRotativo.c
-786 text1 CODE >207:E:\DigitalesII\LedRotativo\LedRotativo.c
-78B text1 CODE >209:E:\DigitalesII\LedRotativo\LedRotativo.c
-78F text1 CODE >210:E:\DigitalesII\LedRotativo\LedRotativo.c
-79C text1 CODE >211:E:\DigitalesII\LedRotativo\LedRotativo.c
-7A1 text1 CODE >212:E:\DigitalesII\LedRotativo\LedRotativo.c
-7A6 text1 CODE >214:E:\DigitalesII\LedRotativo\LedRotativo.c
-7AA text1 CODE >215:E:\DigitalesII\LedRotativo\LedRotativo.c
-7B7 text1 CODE >216:E:\DigitalesII\LedRotativo\LedRotativo.c
-7BC text1 CODE >217:E:\DigitalesII\LedRotativo\LedRotativo.c
-7C1 text1 CODE >219:E:\DigitalesII\LedRotativo\LedRotativo.c
-7C5 text1 CODE >220:E:\DigitalesII\LedRotativo\LedRotativo.c
-7D2 text1 CODE >221:E:\DigitalesII\LedRotativo\LedRotativo.c
-7D7 text1 CODE >222:E:\DigitalesII\LedRotativo\LedRotativo.c
-7DC text1 CODE >224:E:\DigitalesII\LedRotativo\LedRotativo.c
-7DF text1 CODE >225:E:\DigitalesII\LedRotativo\LedRotativo.c
-7EC text1 CODE >226:E:\DigitalesII\LedRotativo\LedRotativo.c
-7EF text1 CODE >228:E:\DigitalesII\LedRotativo\LedRotativo.c
-4AA maintext CODE >30:E:\DigitalesII\LedRotativo\LedRotativo.c
+704 text1 CODE >185:E:\DigitalesII\LedRotativo\LedRotativo.c
+708 text1 CODE >186:E:\DigitalesII\LedRotativo\LedRotativo.c
+715 text1 CODE >187:E:\DigitalesII\LedRotativo\LedRotativo.c
+71A text1 CODE >188:E:\DigitalesII\LedRotativo\LedRotativo.c
+71F text1 CODE >190:E:\DigitalesII\LedRotativo\LedRotativo.c
+723 text1 CODE >191:E:\DigitalesII\LedRotativo\LedRotativo.c
+730 text1 CODE >192:E:\DigitalesII\LedRotativo\LedRotativo.c
+735 text1 CODE >193:E:\DigitalesII\LedRotativo\LedRotativo.c
+73A text1 CODE >195:E:\DigitalesII\LedRotativo\LedRotativo.c
+73E text1 CODE >196:E:\DigitalesII\LedRotativo\LedRotativo.c
+74B text1 CODE >197:E:\DigitalesII\LedRotativo\LedRotativo.c
+750 text1 CODE >198:E:\DigitalesII\LedRotativo\LedRotativo.c
+755 text1 CODE >200:E:\DigitalesII\LedRotativo\LedRotativo.c
+759 text1 CODE >201:E:\DigitalesII\LedRotativo\LedRotativo.c
+766 text1 CODE >202:E:\DigitalesII\LedRotativo\LedRotativo.c
+76B text1 CODE >203:E:\DigitalesII\LedRotativo\LedRotativo.c
+770 text1 CODE >205:E:\DigitalesII\LedRotativo\LedRotativo.c
+774 text1 CODE >206:E:\DigitalesII\LedRotativo\LedRotativo.c
+781 text1 CODE >207:E:\DigitalesII\LedRotativo\LedRotativo.c
+786 text1 CODE >208:E:\DigitalesII\LedRotativo\LedRotativo.c
+78B text1 CODE >210:E:\DigitalesII\LedRotativo\LedRotativo.c
+78F text1 CODE >211:E:\DigitalesII\LedRotativo\LedRotativo.c
+79C text1 CODE >212:E:\DigitalesII\LedRotativo\LedRotativo.c
+7A1 text1 CODE >213:E:\DigitalesII\LedRotativo\LedRotativo.c
+7A6 text1 CODE >215:E:\DigitalesII\LedRotativo\LedRotativo.c
+7AA text1 CODE >216:E:\DigitalesII\LedRotativo\LedRotativo.c
+7B7 text1 CODE >217:E:\DigitalesII\LedRotativo\LedRotativo.c
+7BC text1 CODE >218:E:\DigitalesII\LedRotativo\LedRotativo.c
+7C1 text1 CODE >220:E:\DigitalesII\LedRotativo\LedRotativo.c
+7C5 text1 CODE >221:E:\DigitalesII\LedRotativo\LedRotativo.c
+7D2 text1 CODE >222:E:\DigitalesII\LedRotativo\LedRotativo.c
+7D7 text1 CODE >223:E:\DigitalesII\LedRotativo\LedRotativo.c
+7DC text1 CODE >225:E:\DigitalesII\LedRotativo\LedRotativo.c
+7DF text1 CODE >226:E:\DigitalesII\LedRotativo\LedRotativo.c
+7EC text1 CODE >227:E:\DigitalesII\LedRotativo\LedRotativo.c
+7EF text1 CODE >229:E:\DigitalesII\LedRotativo\LedRotativo.c
 4AA maintext CODE >31:E:\DigitalesII\LedRotativo\LedRotativo.c
-4AD maintext CODE >32:E:\DigitalesII\LedRotativo\LedRotativo.c
-4B0 maintext CODE >33:E:\DigitalesII\LedRotativo\LedRotativo.c
-4B4 maintext CODE >34:E:\DigitalesII\LedRotativo\LedRotativo.c
-4B7 maintext CODE >36:E:\DigitalesII\LedRotativo\LedRotativo.c
-4BB maintext CODE >37:E:\DigitalesII\LedRotativo\LedRotativo.c
-4C3 maintext CODE >38:E:\DigitalesII\LedRotativo\LedRotativo.c
+4AA maintext CODE >32:E:\DigitalesII\LedRotativo\LedRotativo.c
+4AD maintext CODE >33:E:\DigitalesII\LedRotativo\LedRotativo.c
+4B0 maintext CODE >34:E:\DigitalesII\LedRotativo\LedRotativo.c
+4B4 maintext CODE >35:E:\DigitalesII\LedRotativo\LedRotativo.c
+4B7 maintext CODE >37:E:\DigitalesII\LedRotativo\LedRotativo.c
+4BB maintext CODE >38:E:\DigitalesII\LedRotativo\LedRotativo.c
 4C3 maintext CODE >39:E:\DigitalesII\LedRotativo\LedRotativo.c
-4C8 maintext CODE >40:E:\DigitalesII\LedRotativo\LedRotativo.c
-4CC maintext CODE >41:E:\DigitalesII\LedRotativo\LedRotativo.c
-4D6 maintext CODE >42:E:\DigitalesII\LedRotativo\LedRotativo.c
-4DB maintext CODE >43:E:\DigitalesII\LedRotativo\LedRotativo.c
-4E1 maintext CODE >44:E:\DigitalesII\LedRotativo\LedRotativo.c
-4E6 maintext CODE >45:E:\DigitalesII\LedRotativo\LedRotativo.c
-4EC maintext CODE >46:E:\DigitalesII\LedRotativo\LedRotativo.c
-4F1 maintext CODE >47:E:\DigitalesII\LedRotativo\LedRotativo.c
-4F6 maintext CODE >35:E:\DigitalesII\LedRotativo\LedRotativo.c
+4C3 maintext CODE >40:E:\DigitalesII\LedRotativo\LedRotativo.c
+4C8 maintext CODE >41:E:\DigitalesII\LedRotativo\LedRotativo.c
+4CC maintext CODE >42:E:\DigitalesII\LedRotativo\LedRotativo.c
+4D6 maintext CODE >43:E:\DigitalesII\LedRotativo\LedRotativo.c
+4DB maintext CODE >44:E:\DigitalesII\LedRotativo\LedRotativo.c
+4E1 maintext CODE >45:E:\DigitalesII\LedRotativo\LedRotativo.c
+4E6 maintext CODE >46:E:\DigitalesII\LedRotativo\LedRotativo.c
+4EC maintext CODE >47:E:\DigitalesII\LedRotativo\LedRotativo.c
+4F1 maintext CODE >48:E:\DigitalesII\LedRotativo\LedRotativo.c
+4F6 maintext CODE >36:E:\DigitalesII\LedRotativo\LedRotativo.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -259,19 +259,19 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s20c.obj
+___sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 _main 954 0 CODE 0 maintext dist/default/production\LedRotativo.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\LedRotativo.production.obj
-start 0 0 CODE 0 init C:\Users\sebas\AppData\Local\Temp\s20c.obj
+start 0 0 CODE 0 init C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\LedRotativo.production.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s20c.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\LedRotativo.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -287,7 +287,7 @@ __end_of_Secuencia2 B66 0 CODE 0 text3 dist/default/production\LedRotativo.produ
 __end_of_Secuencia3 C32 0 CODE 0 text2 dist/default/production\LedRotativo.production.obj
 __end_of_Secuencia4 FE0 0 CODE 0 text1 dist/default/production\LedRotativo.production.obj
 start_initialization FE0 0 CODE 0 cinit dist/default/production\LedRotativo.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s20c.obj
+___int_sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -334,7 +334,7 @@ _boton4 20 0 BANK0 1 bssBANK0 dist/default/production\LedRotativo.production.obj
 _cambio 9EE 0 CODE 0 text5 dist/default/production\LedRotativo.production.obj
 _bandera 77 0 COMMON 1 bssCOMMON dist/default/production\LedRotativo.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\sebas\AppData\Local\Temp\s20c.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\LedRotativo.production.obj
 __size_of_cambio 0 0 ABS 0 - dist/default/production\LedRotativo.production.obj
@@ -345,8 +345,8 @@ __size_of_Secuencia4 0 0 ABS 0 - dist/default/production\LedRotativo.production.
 __pmaintext 954 0 CODE 0 maintext dist/default/production\LedRotativo.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 0 config -
-stackhi 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s20c.obj
-stacklo 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s20c.obj
+stackhi 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s7pc.obj
+stacklo 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s7pc.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -

@@ -11,17 +11,17 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"30 E:\DigitalesII\LedRotativo\LedRotativo.c
+"31 E:\DigitalesII\LedRotativo\LedRotativo.c
 [v _main main `(v  1 e 1 0 ]
-"52
+"53
 [v _cambio cambio `(v  1 e 1 0 ]
-"91
+"92
 [v _Secuencia1 Secuencia1 `(v  1 e 1 0 ]
-"135
+"136
 [v _Secuencia2 Secuencia2 `(v  1 e 1 0 ]
-"159
+"160
 [v _Secuencia3 Secuencia3 `(v  1 e 1 0 ]
-"183
+"184
 [v _Secuencia4 Secuencia4 `(v  1 e 1 0 ]
 "226 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -97,47 +97,47 @@
 ]
 [u S55 . 1 `S39 1 . 1 0 `S48 1 . 1 0 `S52 1 . 1 0 ]
 [v _TXSTAbits TXSTAbits `VES55  1 e 1 @152 ]
-"12 E:\DigitalesII\LedRotativo\LedRotativo.c
+"13 E:\DigitalesII\LedRotativo\LedRotativo.c
 [v _boton1 boton1 `i  1 e 2 0 ]
-"13
-[v _boton2 boton2 `i  1 e 2 0 ]
 "14
-[v _boton3 boton3 `i  1 e 2 0 ]
+[v _boton2 boton2 `i  1 e 2 0 ]
 "15
-[v _boton4 boton4 `i  1 e 2 0 ]
+[v _boton3 boton3 `i  1 e 2 0 ]
 "16
+[v _boton4 boton4 `i  1 e 2 0 ]
+"17
 [v _bandera bandera `i  1 e 2 0 ]
-"30
+"31
 [v _main main `(v  1 e 1 0 ]
 {
-"50
+"51
 } 0
-"183
+"184
 [v _Secuencia4 Secuencia4 `(v  1 e 1 0 ]
 {
-"229
+"230
 } 0
-"159
+"160
 [v _Secuencia3 Secuencia3 `(v  1 e 1 0 ]
 {
-"181
+"182
 } 0
-"135
+"136
 [v _Secuencia2 Secuencia2 `(v  1 e 1 0 ]
 {
-"157
+"158
 } 0
-"91
+"92
 [v _Secuencia1 Secuencia1 `(v  1 e 1 0 ]
 {
-"94
+"95
 [v Secuencia1@band band `i  1 a 2 5 ]
-"91
+"92
 [v Secuencia1@aux aux `i  1 p 2 0 ]
-"133
+"134
 } 0
-"52
+"53
 [v _cambio cambio `(v  1 e 1 0 ]
 {
-"90
+"91
 } 0

@@ -2189,7 +2189,7 @@ TXSTAbits.TXEN = 1;
 RCSTAbits.SPEN = 1;
 }
 
-# 12 "LedRotativo.c"
+# 13 "LedRotativo.c"
 int boton1 = 0;
 int boton2 = 0;
 int boton3 = 0;
@@ -2202,6 +2202,7 @@ void Secuencia2();
 void Secuencia3();
 void Secuencia4();
 void cambio();
+
 
 
 void main(void) {
